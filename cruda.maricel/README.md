@@ -11,3 +11,5 @@ Github Link: https://github.com/createArtinTech/wnm617_202230_01
 Link to Github Repository: https://github.com/createArtinTech/wnm617_AdvanceMobileTech
 
 ### Side Assignment - CSS ZEN GARDEN
+
+Link: https://crudacreativeart.tech/aau/wnm617/maricel.cruda/csszengarden/index.html
