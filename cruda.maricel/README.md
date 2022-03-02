@@ -4,17 +4,13 @@
 
 ### Important Links
 
-Website Link: https://crudacreativeart.tech/aau/wnm617/maricel.cruda/index.html
-
-Github Link: https://github.com/createArtinTech/wnm617_202230_01
-
-Link to Github Repository: https://github.com/createArtinTech/wnm617_AdvanceMobileTech
+Website Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/
 
 ### Side Assignment - CSS ZEN GARDEN
 
-Link: https://crudacreativeart.tech/aau/wnm617/maricel.cruda/csszengarden/index.html
+Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/csszengarden/index.html
 
 ### App Design - NFT-AL
 
-Link: https://crudacreativeart.tech/aau/wnm617/maricel.cruda/appdesign/CRUDA_m03_Explorations.pdf
+Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/App_Design/CRUDA_m03_Explorations.pdf
 
