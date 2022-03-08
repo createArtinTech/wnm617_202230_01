@@ -12,10 +12,10 @@
 
     <Script src="lib/js/jquery-2.2.4.min.js"></Script>
     <Script src="lib/js/jquery.mobile-1.4.5.min.js"></Script>
-    <script src="js/app.js"></script>
-
-
+    <script src="js/app.js"></script> 
+   <!--<link rel="stylesheet" href="js/app.js">-->
 </head>
+
 <body>
 
     <section data-role="page" id="signin-page">
@@ -25,11 +25,13 @@
                     <label for="signin-username" class="form-label">Username</label>
                     <input type="text" id="signin-username"data-role="none" class="form-input" placeholder="Type your Username">
                 </div>
-                    <div class="form-control">
-                     <label for="signin-password" class="form-label">Password</label>
+                            
+                <div class="form-control">
+                    <label for="signin-password" class="form-label">Password</label>
                     <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Type your Password">
                 </div>
-                <!--<input type="submit" data-role="none">-->
+                        <!--<input type="submit" data-role="none">-->
+                        
                 <div class="form-control">
                     <a href="#recent-page" class="form-button">Submit</a>
                 </div>
@@ -37,9 +39,32 @@
         </div>
     </section>
 
+    <!-- / Recent page / -->
 
     <section data-role="page" id="recent-page">
-        <div data-role="main"></div>
+
+        <header data-role="header">
+            <h1>Tracking NFT Art Location</h1>
+            <ul>
+                <a href="#">Home</a>
+                <li class="flex-stretch"></li>
+                <a href="#">Add</a>
+            </ul>
+        </header>
+
+
+        <div data-role="main" align="center">
+            Find NFT Art Location
+        </div>
+
+        <div data-role="main" >
+            <ul>
+                <li>New Location</li>
+                <li>Recent Location</li>
+                <li>Favorite Location</li>
+            </ul>
+        </div>
+
         <footer data-role="footer">
             <ul>
                 <li><a href="#recent-page">Recent</a></li>
@@ -51,22 +76,32 @@
     </section>
 
 
+<!-- / list page / -->
+
     <section data-role="page" id="list-page">
+
         <header data-role="header">
             <h1>NFT Art Gallery</h1>
             <ul>
+                <a href="#">Home</a>
                 <li class="flex-stretch"></li>
-                <li><a href="#">add</a></li>
+                <a href="#">Add</a>
             </ul>
         </header>
-        <div data-role="main" class="gallery">Welcome the NFT Art Gallery
+
+
+        <div data-role="main" align="center">
+            Welcome the NFT Art Gallery
+        </div>
+
+        <div data-role="main" >
             <ul>
                 <li>APE NFTs</li>
                 <li>Doodle NFTs</li>
                 <li>3D NFTs</li>
             </ul>
-
         </div>
+
         <footer data-role="footer">
             <ul>
                 <li><a href="#recent-page">Recent</a></li>
@@ -77,8 +112,33 @@
 
     </section>
 
-<section data-role="page" id="user-profile-page">
-        <div data-role="main">User Profile</div>
+
+    <!-- / User-Profile page / -->
+
+    <section data-role="page" id="user-profile">
+
+        <header data-role="header">
+            <h1>User Profile</h1>
+            <ul>
+                <a href="#">Home</a>
+                <li class="flex-stretch"></li>
+                <a href="#">Add</a>
+            </ul>
+        </header>
+
+
+        <div data-role="main" align="center">
+            Edit User Profile
+        </div>
+
+        <div data-role="main" >
+            <ul>
+                <li>Nickname</li>
+                <li>Username</li>
+                <li>Theme</li>
+            </ul>
+        </div>
+
         <footer data-role="footer">
             <ul>
                 <li><a href="#recent-page">Recent</a></li>
@@ -88,6 +148,7 @@
         </footer>
 
     </section>
+
 
 </body>
 </html>
