@@ -16,3 +16,6 @@ Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/csszengarden/index.
 
 Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/App_Design/CRUDA_m03_Explorations.pdf
 
+### jQuery Mobile
+
+Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/index.html
