@@ -146,6 +146,18 @@ box-shadow: 0 0 5px rgba(0, 0, 0,15);
 
 position: relative;
 overflow: hidden;
+}
+
+/*.ui-header {
+margin: 0;
+padding:  0;
+position:  absolute;
+top:  0;
+left:  0;
+width:  100%;
+text-align: center;
+
+} */
 
 }
 .ui-header ul,
