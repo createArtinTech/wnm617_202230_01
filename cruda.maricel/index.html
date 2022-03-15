@@ -1,154 +1,251 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NFT Art Locator</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Non-Fungible Token Art Locator</title>
 
-    <base href="/aau/wnm617/cruda.maricel/">
+   <base href="/aau/wnm617/cruda.maricel/"> 
+     <!-- <base href="///C:/Users/User/Documents/nftapp/"> -->
 
-    <Link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css"></Link>
-    <Link rel="stylesheet" href="css/app.css"></Link>
+   <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+   <link rel="stylesheet" href="css/app.css">
 
-    <Script src="lib/js/jquery-2.2.4.min.js"></Script>
-    <Script src="lib/js/jquery.mobile-1.4.5.min.js"></Script>
-    <script src="js/app.js"></script> 
-   <!--<link rel="stylesheet" href="js/app.js">-->
+   <script src="lib/js/jquery-2.2.4.min.js"></script>
+   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+   <script src="js/app.js"></script>
+   <script src="js/signin.js"></script>
 </head>
+
 
 <body>
 
-    <section data-role="page" id="signin-page">
-        <div data-role="main">
-            <form id="signin-form" class="form">
-                <div class="form-control">
-                    <label for="signin-username" class="form-label">Username</label>
-                    <input type="text" id="signin-username"data-role="none" class="form-input" placeholder="Type your Username">
-                </div>
-                            
-                <div class="form-control">
-                    <label for="signin-password" class="form-label">Password</label>
-                    <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Type your Password">
-                </div>
-                        <!--<input type="submit" data-role="none">-->
-                        
-                <div class="form-control">
-                    <a href="#recent-page" class="form-button">Submit</a>
-                </div>
+   <section data-role="page" id="signin-page">
+      <div data-role="main" class="display-flex flex-column">
+         <div class="flex-stretch"></div>
+         <div style="text-align:center;margin-bottom:10vmin">
+            <img src="img/icons/dice.svg" alt="" style="width:50vmin;height:50vmin">
+         </div>
+
+         <form id="signin-form" class="form" data-ajax="false">
+
+            <div class="form-control">
+               <!-- <label for="signin-username" class="form-label">Username</label> -->
+               <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="User ID">
+            </div>
+
+            <div class="form-control">
+               <!-- <label for="signin-password" class="form-label">Password</label> -->
+               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Password">
+            </div>
+
+            <div class="form-control">
+               <button type="submit" class="form-button" data-role="none">Login</button>
+            </div>
+<!--           <div class="form-control" style="text-align:center;font-size:0.8em;">
+                  <p>New to the app? <a href="#signup-page">Sign Up</a></p>
+               </div>
+-->            
+            <div class="form-control">
+               <button type="submit" class="form-button" data-role="none"><a href="#signup-page">Sign Up</a></button>
+            </div>
+
+         </form>
+      </div>
+   </section>
+
+
+   <section data-role="page" id="signup-page">
+      <div data-role="main" class="display-flex flex-column">
+         <div class="flex-stretch"></div>
+         <form id="signup-form" class="form" data-ajax="false">
+
+            <div class="form-control">
+               <label for="signup-username" class="form-label">Username</label>
+               <input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
+            </div>
+
+            <div class="form-control">
+               <label for="signup-password" class="form-label">Password</label>
+               <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
+            </div>
+
+            <div class="form-control">
+               <label for="signup-password2" class="form-label">Confirm Password</label>
+               <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type your Password again">
+            </div>
+
+            <!-- <input type="submit" data-role="none"> -->
+            <div class="form-control">
+               <!-- <button type="button" class="form-button">Submit</button> -->
+               <a href="#recent-page" class="form-button">Sign Up</a>
+            </div>
+
+            <div class="form-control" style="text-align:center;font:#595959;font-size:0.8em;">
+               <p>Already have an account? <a href="#signin-page">Sign In!</a></p>
+            </div>
+
+         </form>
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
+
+
+   <section data-role="page" id="recent-page">
+      <header data-role="footer">
+         <ul>
+            <li><a href="#recent-page">Recent</a></li>
+            <li><a href="#list-page">List</a></li>
+            <li><a href="#user-profile-page">Profile</a></li>
+         </ul>
+      </header>
+
+      <div data-role="main" class="map-placeholder">
+         <div class="marker" style="position:absolute;top:30vh;left:20vw" data-activate="#map-drawer">
+            <img src="img/icons/marker.svg" alt="" class="icon">
+         </div>
+      </div>
+
+      <div class="modal" id="map-drawer">
+         <div class="modal-back transparent passthrough" data-deactivate="#map-drawer">
+         </div>
+         <div class="modal-drawer left">
+            <div class="modal-head display-flex">
+               <div class="flex-none">sidebar</div>
+               <div class="flex-stretch"></div>
+               <div class="flex-none">
+                  <a href="#" data-deactivate="#map-drawer">&times;</a>
+               </div>
+            </div>
+            <div class="modal-body">content!</div>
+         </div>
+      </div>
+   </section>
+
+
+   <section data-role="page" id="list-page">
+      <header data-role="header">
+         <h1>NFT List</h1>
+         <ul>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-activate="#list-add-nft-modal">Add</a></li>
+         </ul>
+      </header>
+
+      <div data-role="main" class="overscroll2">
+         <!-- ul>li*10>a[href=#nft-profile-page]>{nft $} -->
+         <ul>
+            <li><a href="#nft-profile-page">NFT 1</a></li>
+            <li><a href="#nft-profile-page">NFT 2</a></li>
+            <li><a href="#nft-profile-page">NFT 3</a></li>
+            
+         </ul>
+      </div>
+
+      <footer data-role="footer">
+         <ul>
+            <li><a href="#recent-page">Recent</a></li>
+            <li><a href="#list-page">List</a></li>
+            <li><a href="#user-profile-page">Profile</a></li>
+         </ul>
+      </footer>
+
+      <div class="modal" id="list-add-nft-modal">
+         <div class="modal-back" data-deactivate="#list-add-nft-modal"></div>
+         <div class="modal-popup">
+            <div class="modal-head">Add NFT</div>
+            <form class="modal-body overscroll" data-ajax="false">
+
+               <div class="form-control">
+                  <label for="#list-add-nft-type" class="form-label">NFT type</label>
+                  <input type="text" class="form-input" placeholder="Enter an NFT type" data-role="none" id="list-add-nft-type">
+               </div>
+
+               <div class="form-control">
+                  <label for="#list-add-nft-name" class="form-label">NFT name</label>
+                  <input type="text" class="form-input" placeholder="Enter the NFT Name" data-role="none" id="list-add-nft-name">
+               </div>
+
+               <div class="form-control">
+                  <label for="#list-add-nft-owner" class="form-label">Owner name</label>
+                  <input type="text" class="form-input" placeholder="Enter the NFT owner name" data-role="none" id="list-add-nft-owner">
+               </div>
+
+               <div class="form-control">
+                  <label for="#list-add-nft-price" class="form-label">Price/Crypto name</label>
+                  <input type="text" class="form-input" placeholder="Enter the price and crypto name" data-role="none" id="list-add-nft-price">
+               </div>
+
+               <div class="form-control">
+                  <label for="#list-add-nft-medium" class="form-label">Display medium</label>
+                  <input type="text" class="form-input" placeholder="Enter the display medium" data-role="none" id="list-add-nft-display">
+               </div>
+
+               <!-- <p>Nostrum quos delectus blanditiis aperiam! Fuga excepturi, quibusdam, asperiores quis culpa vel ipsum, voluptatem quas officiis a rem nesciunt voluptatum accusamus deserunt consequuntur similique delectus dicta, quod odio. Laboriosam incidunt exercitationem ipsa necessitatibus enim neque. Quisquam totam rerum quia, nobis deleniti quae, delectus hic. Consectetur laudantium quis sunt aperiam hic quidem, velit dolores praesentium sapiente. Non, architecto, quas. Eaque, modi.</p>
+               <div class="display-flex">
+                  <div class="flex-stretch"></div>
+                  <div class="flex-none"><button class="form-button">click</button></div>
+               </div> -->
             </form>
-        </div>
-    </section>
 
-    <!-- / Recent page / -->
-
-    <section data-role="page" id="recent-page">
-
-        <header data-role="header">
-            <h1>Tracking NFT Art Location</h1>
-            <ul>
-                <a href="#">Home</a>
-                <li class="flex-stretch"></li>
-                <a href="#">Add</a>
-            </ul>
-        </header>
+            <div class="modal-foot" style="text-align:right" data-deactivate="#list-add-nft-modal">
+               Submit
+            </div>
+         </div>
+      </div>
+   </section>
 
 
-        <div data-role="main" align="center">
-            Find NFT Art Location
-        </div>
-
-        <div data-role="main" >
-            <ul>
-                <li>New Location</li>
-                <li>Recent Location</li>
-                <li>Favorite Location</li>
-            </ul>
-        </div>
-
-        <footer data-role="footer">
-            <ul>
-                <li><a href="#recent-page">Recent</a></li>
-                <li><a href="#list-page">List</a></li>
-                <li><a href="#user-profile">User Profile</a></li>
-            </ul>
-        </footer>
-
-    </section>
+   <section data-role="page" id="nft-profile-page">
+      <header data-role="header">
+         <h1>NFT</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         NFT profile
+         <a href="#nft-edit-page">Edit</a>
+      </div>
+   </section>
 
 
-<!-- / list page / -->
+   <section data-role="page" id="user-profile-page">
+      <div data-role="main">
+         user profile<br>
+         <a href="#user-edit-page">Edit</a>
+         <br>
+         <a href="#" class="js-logout">Logout</a>
+      </div>
+      <footer data-role="footer">
+         <ul>
+            <li><a href="#recent-page">Recent</a></li>
+            <li><a href="#list-page">List</a></li>
+            <li><a href="#user-profile-page">Profile</a></li>
+         </ul>
+      </footer>
+   </section>
 
-    <section data-role="page" id="list-page">
-
-        <header data-role="header">
-            <h1>NFT Art Gallery</h1>
-            <ul>
-                <a href="#">Home</a>
-                <li class="flex-stretch"></li>
-                <a href="#">Add</a>
-            </ul>
-        </header>
-
-
-        <div data-role="main" align="center">
-            Welcome the NFT Art Gallery
-        </div>
-
-        <div data-role="main" >
-            <ul>
-                <li>APE NFTs</li>
-                <li>Doodle NFTs</li>
-                <li>3D NFTs</li>
-            </ul>
-        </div>
-
-        <footer data-role="footer">
-            <ul>
-                <li><a href="#recent-page">Recent</a></li>
-                <li><a href="#list-page">List</a></li>
-                <li><a href="#user-profile">User Profile</a></li>
-            </ul>
-        </footer>
-
-    </section>
-
-
-    <!-- / User-Profile page / -->
-
-    <section data-role="page" id="user-profile">
-
-        <header data-role="header">
-            <h1>User Profile</h1>
-            <ul>
-                <a href="#">Home</a>
-                <li class="flex-stretch"></li>
-                <a href="#">Add</a>
-            </ul>
-        </header>
-
-
-        <div data-role="main" align="center">
-            Edit User Profile
-        </div>
-
-        <div data-role="main" >
-            <ul>
-                <li>Nickname</li>
-                <li>Username</li>
-                <li>Theme</li>
-            </ul>
-        </div>
-
-        <footer data-role="footer">
-            <ul>
-                <li><a href="#recent-page">Recent</a></li>
-                <li><a href="#list-page">List</a></li>
-                <li><a href="#user-profile">User Profile</a></li>
-            </ul>
-        </footer>
-
-    </section>
-
-
+   <section data-role="page" id="user-edit-page">
+      <header data-role="header">
+         <h1>Edit User</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#list-page">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+        Form
+      </div>
+      <footer data-role="footer">
+         <ul>
+            <li><a href="#recent-page">Recent</a></li>
+            <li><a href="#list-page">List</a></li>
+            <li><a href="#user-profile-page">Profile</a></li>
+         </ul>
+      </footer>
+   </section>
+   
 </body>
 </html>
