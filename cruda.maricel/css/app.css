@@ -275,14 +275,26 @@ a:hover {
 .flex-column { flex-direction:column; }
 .overscroll { overflow:auto; }
 
-.overscroll2 li { 
+
+.nftlist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+    padding: 1em;
+}
+.nftlist li { 
    overflow:auto; 
    text-align: center;
    color: var(--color-main-light); 
    display: inline-block;
-   list-style-type: none;
-   padding:  2em;
-   margin-top: 20px;
-
+}
+.nftlist img {
+    width: 100%;
+    aspect-ratio: 1 / 1.75;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
