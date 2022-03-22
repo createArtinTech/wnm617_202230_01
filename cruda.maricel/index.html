@@ -1,284 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Non-Fungible Token Art Locator</title>
-
-   <base href="/aau/wnm617/cruda.maricel/"> 
-     <!-- <base href="///C:/Users/User/Documents/nftapp/"> -->
-
-   <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
-   <link rel="stylesheet" href="css/app.css">
-
-   <script src="lib/js/jquery-2.2.4.min.js"></script>
-   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
-   <script src="js/app.js"></script>
-   <script src="js/signin.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
+  <title>NFT List</title>
+  <link rel="stylesheet" href="css/swiper.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet"> 
 </head>
 
+<!-- Reference code from mobili > -->
 
-<body>
+<body id="mobile_wrap">
 
-   <section data-role="page" id="signin-page">
-      <div data-role="main" class="display-flex flex-column">
-         <div class="flex-stretch"></div>
-         <div style="text-align:center;margin-bottom:10vmin">
-            <img src="img/icons/dice.svg" alt="" style="width:50vmin;height:50vmin">
-         </div>
+  <div class="panel-overlay"></div>
 
-         <form id="signin-form" class="form" data-ajax="false">
+  <div class="panel panel-left panel-reveal">
 
-            <div class="form-control">
-               <!-- <label for="signin-username" class="form-label">Username</label> -->
-               <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="User ID">
-            </div>
+    <!-- Slider -->
+    <div class="swiper-container-subnav multinav">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">		
 
-            <div class="form-control">
-               <!-- <label for="signin-password" class="form-label">Password</label> -->
-               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Password">
-            </div>
+          <nav class="main_nav_underline">
+            <ul>
+              <li><a href="index.html"><img src="images/icons/gray/home.png" alt="" title="" /><span>Home</span></a></li>
+              <li><a href="photos.html"><img src="images/icons/gray/photos.png" alt="" title="" /><span>NFT Gallery</span></a></li>
+              <li><a href="#" data-panel="right" class="open-panel"><img src="images/icons/gray/user.png" alt="" title="" /><span>User Profile</span></a></li>
+              <li><a href="form.html"><img src="images/icons/gray/form.png" alt="" title="" /><span>Add NFT Artwork</span></a></li>
+            </ul>
+          </nav>
 
-            <div class="form-control">
-               <button type="submit" class="form-button" data-role="none">Login</button>
-            </div>
-<!--           <div class="form-control" style="text-align:center;font-size:0.8em;">
-                  <p>New to the app? <a href="#signup-page">Sign Up</a></p>
-               </div>
--->            
-            <div class="form-control">
-               <button type="submit" class="form-button" data-role="none"><a href="#signup-page">Sign Up</a></button>
-            </div>
+        </div>	
 
-         </form>
+        <div class="swiper-slide">		
+          <div class="subnav_header backtonav"><img src="images/icons/gray/back.png" alt="" title="" /><span>BACK TO MAIN MENU</span>
+          </div>
+
+          <nav class="main_nav_underline">
+            <ul>
+              <li><a href="index.html"><img src="images/icons/gray/home.png" alt="" title="" /><span>Home</span></a></li>
+              <li><a href="photos.html"><img src="images/icons/gray/photos.png" alt="" title="" /><span>NFT Gallery</span></a></li>
+              <li><a href="#" data-panel="right" class="open-panel"><img src="images/icons/gray/user.png" alt="" title="" /><span>User Profile</span></a></li>
+              <li><a href="form.html"><img src="images/icons/gray/form.png" alt="" title="" /><span>Add NFT Artwork</span></a></li>
+            </ul>
+          </nav>
+
+        </div>
       </div>
-   </section>
+    </div>
+  </div>
 
 
-   <section data-role="page" id="signup-page">
-      <div data-role="main" class="display-flex flex-column">
-         <div class="flex-stretch"></div>
-         <form id="signup-form" class="form" data-ajax="false">
+<!-- user log-in infor-->
+<div class="panel panel-right panel-reveal">
+  <div class="user_login_info">
+    <div class="user_thumb">
+      <div class="user_details">
+        <p>Welcome, <span>Maricel</span></p>
+      </div>  
+      <div class="user_avatar">
+        <img src="images/avatar3.jpg" alt="" title="" />
+      </div>       
+    </div>
 
-            <div class="form-control">
-               <label for="signup-username" class="form-label">Username</label>
-               <input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
-            </div>
+    <nav class="user-nav">
+      <ul>
+        <li><a href="features.html"><img src="images/icons/gray/settings.png" alt="" title="" /><span>Account Settings</span></a></li>
+        <li><a href="features.html"><img src="images/icons/gray/user.png" alt="" title="" /><span>My Account</span></a></li>
+        <li><a href="index.html"><img src="images/icons/gray/logout.png" alt="" title="" /><span>Logout</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
 
-            <div class="form-control">
-               <label for="signup-password" class="form-label">Password</label>
-               <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
-            </div>
+<div class="views">
+<div class="view view-main">
+<div class="pages">
 
-            <div class="form-control">
-               <label for="signup-password2" class="form-label">Confirm Password</label>
-               <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type your Password again">
-            </div>
+  <div data-page="index" class="page homepage">
 
-            <!-- <input type="submit" data-role="none"> -->
-            <div class="form-control">
-               <!-- <button type="button" class="form-button">Submit</button> -->
-               <a href="#recent-page" class="form-button">Sign Up</a>
-            </div>
+    <div class="page-content">
 
-            <div class="form-control" style="text-align:center;font:#595959;font-size:0.8em;">
-               <p>Already have an account? <a href="#signin-page">Sign In!</a></p>
-            </div>
-
-         </form>
-         <div class="flex-stretch"></div>
-      </div>
-   </section>
-
-
-   <section data-role="page" id="recent-page">
-      <header data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
-         </ul>
-      </header>
-
-      <div data-role="main" class="map-placeholder">
-         <div class="marker" style="position:absolute;top:30vh;left:20vw" data-activate="#map-drawer">
-            <img src="img/icons/marker.svg" alt="" class="icon">
-         </div>
+      <div class="navbar navbar--fixed navbar--fixed-top">
+        <div class="navbar__col navbar__col--title">
+          <a href="index.html">NFT Artwork Locator</a>
+        </div>
+        <div class="navbar__col navbar__col--icon navbar__col--icon-right">
+          <a href="#" data-panel="left" class="open-panel"><img src="images/icons/white/menu.png" alt="" title="" /></a>
+        </div>			
       </div>
 
-      <div class="modal" id="map-drawer">
-         <div class="modal-back transparent passthrough" data-deactivate="#map-drawer">
-         </div>
-         <div class="modal-drawer left">
-            <div class="modal-head display-flex">
-               <div class="flex-none">sidebar</div>
-               <div class="flex-stretch"></div>
-               <div class="flex-none">
-                  <a href="#" data-deactivate="#map-drawer">&times;</a>
-               </div>
-            </div>
-            <div class="modal-body">content!</div>
-         </div>
-      </div>
-   </section>
+      <!-- Slider -->
+      <div class="swiper-container slidertoolbar">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image:url(images/slide4.jpg);">
+            <div class="slider-caption">
+              <h2 data-swiper-parallax="-100%">NFT Artwork Locator</h2>
+              <p data-swiper-parallax="-30%">Welcome to NFT Artwork locator. This app will enable you to track and record NFT artworks that you'll see in any physical environment (i.e., subways, smart watch, backpacks, buses, billboards, digital galleries etc.). You'll be able to take photos and create data list of your favorite NFT digital artworks. This app will be a great resources for any artist, designers, blockchain investors and NFT art enthusiasts.</p> 
 
+              <div class="login_bottom">
+                <a href="#" data-popup=".popup-login" class="open-popup">LOG IN</a>
+              </div>
 
-   <section data-role="page" id="list-page">
-      <header data-role="header">
-         <h1>NFT List</h1>
-         <ul>
-            <li class="flex-stretch"></li>
-            <li><a href="#" data-activate="#list-add-nft-modal">Add</a></li>
-         </ul>
-      </header>
+              <div class="signup_bottom">
+                <p>Don't have an account?</p>
+                <a href="#" data-popup=".popup-signup" class="open-popup">SIGN UP</a>
+              </div>
 
-      <div data-role="main" class="overscroll nftlist" >
-         <!-- ul>li*10>a[href=#nft-profile-page]>{nft $} -->
-         <ul>
-            <li>
-                <a href="#nft-profile-page">
-                    <img src="https://via.placeholder.com/400x400/?text=NFT1" alt="">
-                    <div class="nft-list-title">NFT 1</div>
-                </a>
-            </li>
-            <li>
-                <a href="#nft-profile-page">
-                    <img src="https://via.placeholder.com/400x400/?text=NFT2" alt="">
-                    <div class="nft-list-title">NFT 2</div>
-                </a>
-            </li>
-            <li>
-                <a href="#nft-profile-page">
-                    <img src="https://via.placeholder.com/400x400/?text=NFT3" alt="">
-                    <div class="nft-list-title">NFT 3</div>
-                </a>
-            </li>
-            <li>
-                <a href="#nft-profile-page">
-                    <img src="https://via.placeholder.com/400x400/?text=NFT1" alt="">
-                    <div class="nft-list-title">NFT 1</div>
-                </a>
-            </li>
-            <li>
-                <a href="#nft-profile-page">
-                    <img src="https://via.placeholder.com/400x400/?text=NFT2" alt="">
-                    <div class="nft-list-title">NFT 2</div>
-                </a>
-            </li>
-            <li>
-                <a href="#nft-profile-page">
-                    <img src="https://via.placeholder.com/400x400/?text=NFT3" alt="">
-                    <div class="nft-list-title">NFT 3</div>
-                </a>
-            </li>
-            
-         </ul>
+              <!-- <a href="#" data-popup=".popup-signup" class="open-popup">SIGN UP</a>
+              <a href="about.html" class="slider-caption__more" data-swiper-parallax="-60%">LOG IN</a>-->
+            </div>  <!--end div slider-caption-->
+
+          </div> 		   
+        </div>
       </div>
 
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
-         </ul>
-      </footer>
+    </div> 
 
-      <div class="modal" id="list-add-nft-modal">
-         <div class="modal-back" data-deactivate="#list-add-nft-modal"></div>
-         <div class="modal-popup">
-            <div class="modal-head">Add NFT</div>
-            <form class="modal-body overscroll" data-ajax="false">
+    <!-- end class page-content -->
 
-               <div class="form-control">
-                  <label for="#list-add-nft-type" class="form-label">NFT type</label>
-                  <input type="text" class="form-input" placeholder="Enter an NFT type" data-role="none" id="list-add-nft-type">
-               </div>
 
-               <div class="form-control">
-                  <label for="#list-add-nft-name" class="form-label">NFT name</label>
-                  <input type="text" class="form-input" placeholder="Enter the NFT Name" data-role="none" id="list-add-nft-name">
-               </div>
+    <!-- Login Popup -->
+    <div class="popup popup-login">
+      <div class="content-block">
+        <h4>LOGIN</h4>
+        <div class="loginform">
+          <form id="LoginForm" method="post" class="form" data-ajax="false">
+            <input type="text" id="signin-username" name="Username" value="" class="form_input required" placeholder="username" />
+            <input type="password" id="signin-password" name="Password" value="" class="form_input required" placeholder="password" />
+            <div class="forgot_pass"><a href="#" data-popup=".popup-forgot" class="open-popup">Forgot Password?</a></div>
+            <input type="submit" name="submit" class="form_submit" id="submit" value="SIGN IN" />
+          </form>
 
-               <div class="form-control">
-                  <label for="#list-add-nft-owner" class="form-label">Owner name</label>
-                  <input type="text" class="form-input" placeholder="Enter the NFT owner name" data-role="none" id="list-add-nft-owner">
-               </div>
+          <div class="signup_bottom">
+            <p>Don't have an account?</p>
+            <a href="#" data-popup=".popup-signup" class="open-popup">SIGN UP</a>
+          </div>
+        </div>
 
-               <div class="form-control">
-                  <label for="#list-add-nft-price" class="form-label">Price/Crypto name</label>
-                  <input type="text" class="form-input" placeholder="Enter the price and crypto name" data-role="none" id="list-add-nft-price">
-               </div>
-
-               <div class="form-control">
-                  <label for="#list-add-nft-medium" class="form-label">Display medium</label>
-                  <input type="text" class="form-input" placeholder="Enter the display medium" data-role="none" id="list-add-nft-display">
-               </div>
-
-               <!-- <p>Nostrum quos delectus blanditiis aperiam! Fuga excepturi, quibusdam, asperiores quis culpa vel ipsum, voluptatem quas officiis a rem nesciunt voluptatum accusamus deserunt consequuntur similique delectus dicta, quod odio. Laboriosam incidunt exercitationem ipsa necessitatibus enim neque. Quisquam totam rerum quia, nobis deleniti quae, delectus hic. Consectetur laudantium quis sunt aperiam hic quidem, velit dolores praesentium sapiente. Non, architecto, quas. Eaque, modi.</p>
-               <div class="display-flex">
-                  <div class="flex-stretch"></div>
-                  <div class="flex-none"><button class="form-button">click</button></div>
-               </div> -->
-            </form>
-
-            <div class="modal-foot" style="text-align:right" data-deactivate="#list-add-nft-modal">
-               Submit
-            </div>
-         </div>
+        <div class="close_popup_button">
+          <a href="#" class="close-popup" data-popup=".popup-login"><img src="images/icons/black/menu_close.png" alt="" title="" /></a>
+        </div>
       </div>
-   </section>
+    </div> <!-- end class popup popup-login -->
 
 
-   <section data-role="page" id="nft-profile-page">
-      <header data-role="header">
-         <h1>NFT</h1>
-         <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
-         </ul>
-      </header>
-      <div data-role="main">
-         NFT profile
-         <a href="#nft-edit-page">Edit</a>
+    <!-- Register Popup -->
+    <div class="popup popup-signup">
+      <div class="content-block">
+        <h4>REGISTER</h4>
+        <div class="loginform">
+          <form id="RegisterForm" method="post">
+            <input type="text" name="Username" value="" class="form_input required" placeholder="Username" />
+            <input type="text" name="Email" value="" class="form_input required" placeholder="Email" />
+            <input type="password" name="Password" value="" class="form_input required" placeholder="Password" />
+            <input type="submit" name="submit" class="form_submit" id="submitregister" value="SIGN UP" />
+          </form>
+        </div>
       </div>
-   </section>
+    </div>
 
 
-   <section data-role="page" id="user-profile-page">
-      <div data-role="main">
-         user profile<br>
-         <a href="#user-edit-page">Edit</a>
-         <br>
-         <a href="#" class="js-logout">Logout</a>
+    <!-- Forgot Password Popup -->
+    <div class="popup popup-forgot">
+      <div class="content-block">
+        <h4>FORGOT PASSWORD</h4>
+        <div class="loginform">
+          <form id="ForgotForm" method="post">
+            <input type="text" name="Email" value="" class="form_input required" placeholder="email" />
+            <input type="submit" name="submit" class="form_submit" id="submitforgot" value="RESEND PASSWORD" />
+          </form>
+
+          <div class="signup_bottom">
+            <p>Check your email and follow the instructions to reset your password.</p>
+          </div>
+        </div>
+
+        <div class="close_popup_button">
+            <a href="#" class="close-popup" data-popup=".popup-forgot"><img src="images/icons/black/menu_close.png" alt="" title="" /></a>
+        </div>
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
-         </ul>
-      </footer>
-   </section>
+    </div>
 
-   <section data-role="page" id="user-edit-page">
-      <header data-role="header">
-         <h1>Edit User</h1>
-         <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#list-page">Save</a></li>
-         </ul>
-      </header>
-      <div data-role="main">
-        Form
-      </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
-         </ul>
-      </footer>
-   </section>
-   
+	
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/jquery.validate.min.js" ></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.custom.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/signin.js"></script>
+
 </body>
 </html>
