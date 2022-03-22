@@ -1,6 +1,5 @@
 
 /*===============================================*/
-/* Reference code from mobili */
 /* 1. RESET		 						 */
 /*===============================================*/
 @import "css/reset.css";
@@ -19,7 +18,7 @@ body {
 font-family: 'Roboto', sans-serif;
 margin: 0;
 padding: 0;
-background-color: #000;
+background-color: transparent;
 color: #232323;
 
 font-size: 14px;
@@ -309,14 +308,16 @@ box-shadow:         0px 0px 4px 0px #303030;
 display: inline-block;
 color: #fff;
 background-color: #0CB88B;
+
 /*background-color: #4f40f1;
-/*background: -webkit-linear-gradient(60deg, #4f40f1, #6100bc);
+background: -webkit-linear-gradient(60deg, #4f40f1, #6100bc);
 background: linear-gradient(60deg, #4f40f1, #6100bc);*/
+
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 border-radius: 20px;
 padding: 12px 30px;
-font-size: 14px;
+font-size: 16px;
 }	
 .btn--full{
 width:100%; 
@@ -367,7 +368,8 @@ cursor: pointer;
 background-color:#f7f7f7;
 }
 .button.active {
-background: #455dfe;
+background: #0CB88B;
+/*background: #455dfe;*/
 color: #222222;
 }
 .buttons-row .button:first-child {
@@ -567,7 +569,8 @@ text-align:center;
 -webkit-border-radius: 50%;
 -moz-border-radius: 50%;
 border-radius: 50%;
-background-color:#455dfe;
+background-color:#0cb88b;
+/*background-color:#455dfe;*/
 color:#fff;
 font-size:11px;
 }
@@ -1015,8 +1018,9 @@ color:#fff;
 .slider-caption__more{
 display:inline-block;
 color:#fff;
-background-color:#4f40f1;
-background: -webkit-linear-gradient(60deg, #4f40f1, #6100bc); 
+
+background-color: #4f40f1;
+background: -webkit-linear-gradient(60deg, #4f40f1, #6100bc);
 background: linear-gradient(60deg, #4f40f1, #6100bc);
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
@@ -2475,7 +2479,8 @@ border: none;
 cursor:pointer;
 -webkit-appearance: none;
 color: #fff;
-background-color: #4f40f1;
+background-color: #0CB88B;
+/*background-color: #4f40f1;*/
 background: -webkit-linear-gradient(60deg, #4f40f1, #6100bc);
 background: linear-gradient(60deg, #4f40f1, #6100bc);
 -webkit-border-radius: 20px;
@@ -2490,7 +2495,8 @@ font-size:12px;
 }
 .forgot_pass a{
 font-weight:700;
-color:#86d7ec;
+color:#0CB88B;
+/*color:#86d7ec;*/
 }
 
 .login_bottom{
@@ -2504,7 +2510,8 @@ padding:0px 0 10px 0;
 font-size:16px;
 }
 .login_bottom a{
-background-color:#86d7ec;
+background-color:#0CB88B;
+/*background-color:#86d7ec;*/
 color:#fff;
 font-weight:300;
 font-size:16px;
