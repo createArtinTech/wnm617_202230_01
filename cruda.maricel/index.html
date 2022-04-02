@@ -1,193 +1,691 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
-  <title>NFT List</title>
-  <link rel="stylesheet" href="css/swiper.css">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet"> 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>nft Tracker</title>
+
+   <base href="/aau/wnm617/cruda.maricel/">
+
+   <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+   <link rel="stylesheet" href="css/app.css">
+
+   <script src="lib/js/jquery-2.2.4.min.js"></script>
+   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+   <script src="js/app.js"></script>
+   <script src="js/signin.js"></script>
 </head>
+<body>
 
-<body id="mobile_wrap">
+   <section data-role="page" id="signin-page">
+      <div data-role="main" class="display-flex flex-column">
+         <div class="flex-stretch"></div>
+         <div style="text-align:center;margin-bottom:10vmin">
+            <img src="img/categories/azuki.png" alt="" style="width:50vmin;height:50vmin">
+         </div>
 
-  <div class="panel-overlay"></div>
+         <form id="signin-form" class="form" data-ajax="false">
+            <div class="form-control">
+               <label for="signin-username" class="form-label">Username</label>
+               <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Type your Username">
+            </div>
+            <div class="form-control">
+               <label for="signin-password" class="form-label">Password</label>
+               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Type your Password">
+            </div>
 
-  <div class="panel panel-left panel-reveal">
+            <!-- <input type="submit" data-role="none"> -->
+            <!-- submit -->
 
-    <!-- Slider -->
-    <div class="swiper-container-subnav multinav">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">		
+            <div class="form-control">
+               <button type="submit" class="form-button" data-role="none">Submit</button>
+            </div>
 
-          <nav class="main_nav_underline">
-            <ul>
-              <li><a href="index.html"><img src="images/icons/gray/home.png" alt="" title="" /><span>Home</span></a></li>
-              <li><a href="photos.html"><img src="images/icons/gray/photos.png" alt="" title="" /><span>NFT Gallery</span></a></li>
-              <li><a href="#" data-panel="right" class="open-panel"><img src="images/icons/gray/user.png" alt="" title="" /><span>User Profile</span></a></li>
-              <li><a href="form.html"><img src="images/icons/gray/form.png" alt="" title="" /><span>Add NFT Artwork</span></a></li>
-            </ul>
-          </nav>
+            <div class="form-control" style="text-align:center;font-size:0.8em;">
+               <p>New to the app? <a href="#signup-page">Sign Up!</a></p>
+            </div>
+         </form>
+      </div>
+   </section>
 
-        </div>	
+         <!-- signup -->
 
-        <div class="swiper-slide">		
-          <div class="subnav_header backtonav"><img src="images/icons/gray/back.png" alt="" title="" /><span>BACK TO MAIN MENU</span>
-          </div>
+   <section data-role="page" id="signup-page">
+      <div data-role="main" class="display-flex flex-column">
+         <div class="flex-stretch"></div>
+         <form id="signup-form" class="form" data-ajax="false">
+            <div class="form-control">
+               <label for="signup-username" class="form-label">Username</label>
+               <input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
+            </div>
+            <div class="form-control">
+               <label for="signup-password" class="form-label">Password</label>
+               <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
+            </div>
+            <div class="form-control">
+               <label for="signup-password2" class="form-label">Confirm Password</label>
+               <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type your Password again">
+            </div>
 
-          <nav class="main_nav_underline">
-            <ul>
-              <li><a href="index.html"><img src="images/icons/gray/home.png" alt="" title="" /><span>Home</span></a></li>
-              <li><a href="photos.html"><img src="images/icons/gray/photos.png" alt="" title="" /><span>NFT Gallery</span></a></li>
-              <li><a href="#" data-panel="right" class="open-panel"><img src="images/icons/gray/user.png" alt="" title="" /><span>User Profile</span></a></li>
-              <li><a href="form.html"><img src="images/icons/gray/form.png" alt="" title="" /><span>Add NFT Artwork</span></a></li>
-            </ul>
-          </nav>
+
+            <!-- <input type="submit" data-role="none"> -->
+
+            <div class="form-control">
+               <!-- <button type="button" class="form-button">Submit</button> -->
+               <a href="#list-page" class="form-button">Sign Up</a>
+            </div>
+            <div class="form-control" style="text-align:center;font-size:0.8em;">
+               <p>Already have an account? <a href="#signin-page">Sign In!</a></p>
+            </div>
+         </form>
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
+
+  <!-- recent page (map page)-->
+
+   <section data-role="page" id="recent-page">
+     <header data-role="header">
+        <h1>MAP LOCATION</h1>
+        <ul>
+          <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+          <li class="flex-stretch">
+         </li>
+        </ul>
+     </header>
+
+      <div data-role="main" class="map-placeholder">
+         <div class="recent-search">
+            <form class="hotdog flex-stretch" data-ajax="false" id="recent-search">
+               <input type="search" data-role="none" placeholder="Search">
+            </form>
+            <div class="flex-none" style="line-height:3rem;padding:0 0.5em">
+               <img src="img/maps/sfo-zoomout.png" style="vertical-align: middle;" alt="" class="icon">
+            </div>
+         </div>
+         <div class="marker" style="position:absolute;top:20vh;left:50vw" data-activate="#map-drawer">
+            <img src="img/icons/marker.png" alt="" class="markericon">
+         </div>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+    </div>
+ </section>
+
+<!--  <div class="modal" id="map-drawer">
+         <div class="modal-back transparent passthrough" data-deactivate="#map-drawer"></div>
+         <div class="modal-drawer left">
+            <div class="modal-head display-flex">
+               <div class="flex-none">sidebar</div>
+               <div class="flex-stretch"></div>
+               <div class="flex-none">
+                  <a href="#" data-deactivate="#map-drawer">&times;</a>
+               </div>
+
+            </div>
+            <div class="modal-body">
+               content!
+            </div>
+         </div>
+
+       </div>
+    </section>
+  -->
+
+
+
+<!--==================================== -->
+      <!-- NFT CATEGORIES page -->
+<!--==================================== -->
+  <section data-role="page" id="categories-page">
+     <header data-role="header">
+        <h1>Select Categories</h1>
+        <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+           <li class="flex-stretch">
+         </li>
+        </ul>
+     </header>
+
+     <div data-role="main">
+        <ul class="nft-list">
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/bored-ape-yacht-club.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">Bored Ape Yacht Club</div>
+                 </div>
+              </a>
+           </li>
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/cryptopunks.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunks</div>
+                 </div>
+              </a>
+           </li>
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/doodles.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">Doodles</div>
+                 </div>
+              </a>
+           </li>
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/cool-cats.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">Cool Cats</div>
+                 </div>
+              </a>
+           </li>
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/cyberkongz.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">CyberKongz</div>
+                 </div>
+              </a>
+           </li>
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/deadfellaz.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">DeadFellaz</div>
+                 </div>
+              </a>
+           </li>
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">Azuki</div>
+                 </div>
+              </a>
+           </li>
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/Edenhorde.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">Edenhorde</div>
+                 </div>
+              </a>
+           </li>
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/dronies.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">Dronies</div>
+                 </div>
+              </a>
+           </li>
+
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/holy-cows.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">Holy Cows</div>
+                 </div>
+              </a>
+           </li>
+
+
+           <li class="nft-list-item">
+              <a href="#list-page">
+                 <div class="nft-list-image"><img src="img/categories/Uunicorns.png" alt=""></div>
+                 <div class="nft-list-body">
+                    <div class="NFT-list-name">Uunicorns</div>
+                 </div>
+              </a>
+           </li>
+
+
+            <li class="nft-list-item">
+                <a href="#list-page">
+                  <div class="nft-list-image"><img src="img/categories/doge-pound-puppies.png" alt=""></div>
+                  <div class="nft-list-body">
+                       <div class="NFT-list-name">Doge Pound Puppies</div>
+                  </div>
+                   </a>
+            </li>
+
+
+              <li class="nft-list-item">
+                         <a href="#list-page">
+                            <div class="nft-list-image"><img src="img/categories/gator-world-nft.png" alt=""></div>
+                            <div class="nft-list-body">
+                               <div class="NFT-list-name">Gator World NFT</div>
+                            </div>
+                         </a>
+                      </li>
+
+              <li class="nft-list-item">
+                    <a href="#list-page">
+                      <div class="nft-list-image"><img src="img/categories/mfer.png" alt=""></div>
+                      <div class="nft-list-body">
+                     <div class="NFT-list-name">MFER</div>
+                  </div>
+                 </a>
+                </li>
+         </ul>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+
+    </div>
+  </div>
+</section>
+
+
+<!--==================================== -->
+          <!-- NFT LIST page -->
+<!--==================================== -->
+
+
+   <section data-role="page" id="list-page">
+      <header data-role="header">
+         <h1>NFT LIST</h1>
+         <ul>
+             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch">
+          </li>
+         </ul>
+      </header>
+
+      <div data-role="main">
+         <!-- ul>li*10>a[href=#nft-profile-page]>{nft $} -->
+         <ul class="nft-list">
+            <!-- li.nft-list-item*10>a[href=#nft-profile-page]>(div.nft-list-image>img[src='https://via.placeholder.com/400x400/?text=nft$'])+div.nft-list-body>(div.nft-list-name>{nft $})+(div.nft-list-type>{Type})+(div.nft-list-breed>{Breed}) -->
+            <li class="nft-list-item">
+               <a href="#nft-profile-page-crypotopunk4012">
+                  <div class="nft-list-image"><img src="img/collections/cryptopunk/cryptopunk4012/cryptopunk4012-thumb.png" alt=""></div>
+                  <div class="nft-list-body">
+                     <div class="NFT-list-name">Cryptopunk #4120</div>
+                     <div class="NFT-list-type">Cryptopunk</div>
+                     <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page-crypotopunk2824">
+                  <div class="nft-list-image"><img src="img/collections/cryptopunk/cryptopunk2824/cryptopunk2824-thumb.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #2824</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">Subway 5 New York, NY</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/cryptopunks.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+            <li class="nft-list-item">
+               <a href="#nft-profile-page">
+                  <div class="nft-list-image"><img src="img/categories/azuki.png" alt=""></div>
+                  <div class="nft-list-body">
+                    <div class="NFT-list-name">Cryptopunk #4120</div>
+                    <div class="NFT-list-type">Cryptopunk</div>
+                    <div class="NFT-list-location">San Francisco Intl. Airport - SF, CA</div>
+                  </div>
+               </a>
+            </li>
+         </ul>
+
+         <div class="floater bottom right circle-button" data-activate="#list-add-nft-modal">&plus;</div>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+
+<!--==================================== -->
+      <!--add list NFT -->
+<!--==================================== -->
+
+      <div class="modal" id="list-add-nft-modal">
+         <div class="modal-back" data-deactivate="#list-add-nft-modal"></div>
+         <div class="modal-popup">
+            <div class="modal-head">Add nft</div>
+            <form class="modal-body overscroll" data-ajax="false">
+               <div class="form-control">
+                  <label for="#list-add-nft-name" class="form-label">name</label>
+                  <input type="text" class="form-input" placeholder="Type a Name" data-role="none" id="list-add-nft-name">
+               </div>
+               <div class="form-control">
+                  <label for="#list-add-nft-type" class="form-label">type</label>
+                  <input type="text" class="form-input" placeholder="Type a Type" data-role="none" id="list-add-nft-type">
+               </div>
+               <div class="form-control">
+                  <label for="#list-add-nft-breed" class="form-label">breed</label>
+                  <input type="text" class="form-input" placeholder="Type a Breed" data-role="none" id="list-add-nft-breed">
+               </div>
+               <div class="form-control">
+                  <label for="#list-add-nft-description" class="form-label">description</label>
+                  <input type="text" class="form-input" placeholder="Type a Description" data-role="none" id="list-add-nft-description">
+               </div>
+               <!-- <p>Nostrum quos delectus blanditiis aperiam! Fuga excepturi, quibusdam, asperiores quis culpa vel ipsum, voluptatem quas officiis a rem nesciunt voluptatum accusamus deserunt consequuntur similique delectus dicta, quod odio. Laboriosam incidunt exercitationem ipsa necessitatibus enim neque. Quisquam totam rerum quia, nobis deleniti quae, delectus hic. Consectetur laudantium quis sunt aperiam hic quidem, velit dolores praesentium sapiente. Non, architecto, quas. Eaque, modi.</p>
+               <div class="display-flex">
+                  <div class="flex-stretch"></div>
+                  <div class="flex-none"><button class="form-button">click</button></div>
+               </div> -->
+            </form>
+            <div class="modal-foot" style="text-align:right" data-deactivate="#list-add-nft-modal">
+               Submit
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+ <!--==================================== -->
+         <!-- NFT Profile -->
+<!--==================================== -->
+
+
+<!--crypotopunk4012"-->
+
+   <section data-role="page" id="nft-profile-page-crypotopunk4012">
+      <header data-role="header">
+         <h1>NFT Profile</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#edit-NFT-page-cryptopunk4120">Edit</a></li>
+         </ul>
+      </header>
+
+      <div data-role="main" class="mainprofile" id="cyptopunk4012">
+         <h1>Cryptopunk #4120</h1>
+         <div class="NFT-list-image"><img src="img/collections/cryptopunk/cryptopunk4012/cryptopunk4012-full.png" alt=""></div>
+        <div class="mainprofile-details">
+          <p class="labelnftprofile">Type</p>
+          <p class="currentlabelprofile">Cryptopunk</p>
+          <p class="labelnftprofile">Location</p>
+          <p class="currentlabelprofile">San Francisco Intl. Airport, CA</p>
+          <p class="labelnftprofile">Description</p>
+          <p class="currentlabelprofile">Cryptopunk collection - luggage brand collection.
+            Seen in SFO airport.</p>
+
+      <div> <a href="#categories-page">More categories</div>
 
         </div>
       </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+<!--crypotopunk2824-->
+
+      <section data-role="page" id="nft-profile-page-crypotopunk2824">
+         <header data-role="header">
+            <h1>NFT Profile</h1>
+            <ul>
+               <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+               <li class="flex-stretch"></li>
+               <li><a href="#edit-NFT-page-cryptopunk2824">Edit</a></li>
+            </ul>
+         </header>
+
+
+        <div data-role="main" class="mainprofile">
+           <h1>Cryptopunk #2824</h1>
+           <div class="NFT-list-image"><img src="img/collections/cryptopunk/cryptopunk2824/cryptopunk2824-full.png" alt=""></div>
+            <div class="mainprofile-details">
+              <p class="labelnftprofile">Type</p>
+              <p class="currentlabelprofile">Cryptopunk</p>
+              <p class="labelnftprofile">Location</p>
+              <p class="currentlabelprofile">Subway 5 - New York, NY</p>
+              <p class="labelnftprofile">Description</p>
+              <p class="currentlabelprofile">Cryptopunk collection - Poster display collection.
+                Seen in Subway 5 - New York, NY.</p>
+                  <div> <a href="#categories-page">More categories</div>
+
     </div>
-  </div>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
 
+<!-- EDIT NFT PROFILE -->
+<!-- EDIT Profile for cryptopnk4012 -->
 
-<!-- user log-in information-->
-<div class="panel panel-right panel-reveal">
-  <div class="user_login_info">
-    <div class="user_thumb">
-      <div class="user_details">
-        <p>Welcome, <span>Maricel</span></p>
-      </div>  
-      <div class="user_avatar">
-        <img src="images/avatar3.jpg" alt="" title="" />
-      </div>       
-    </div>
-
-    <nav class="user-nav">
+<section data-role="page" id="edit-NFT-page-cryptopunk4120">
+   <header data-role="header">
+      <h1>Edit NFT Profile</h1>
+      <!--  <ul>
+           <li><a href="#" data-rel="back">Back</a></li>
+           <li class="flex-stretch"></li>
+           <li><a href="#list-page">Save</a></li>
+        </ul> -->
       <ul>
-        <li><a href="features.html"><img src="images/icons/gray/settings.png" alt="" title="" /><span>Account Settings</span></a></li>
-        <li><a href="features.html"><img src="images/icons/gray/user.png" alt="" title="" /><span>My Account</span></a></li>
-        <li><a href="index.html"><img src="images/icons/gray/logout.png" alt="" title="" /><span>Logout</span></a></li>
+         <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+         <li class="flex-stretch"></li>
+         <li><a href="#list-page">Save</a></li>
       </ul>
-    </nav>
-  </div>
-</div>
+     </header>
 
-<div class="views">
-<div class="view view-main">
-<div class="pages">
-
-  <div data-page="index" class="page homepage">
-
-    <div class="page-content">
-
-      <div class="navbar navbar--fixed navbar--fixed-top">
-        <div class="navbar__col navbar__col--title">
-         <!-- <a href="index.html">NFT Artwork Locator</a> -->
-        </div>
-        <div class="navbar__col navbar__col--icon navbar__col--icon-right">
-          <a href="#" data-panel="left" class="open-panel"><img src="images/icons/white/menu.png" alt="" title="" /></a>
-        </div>			
-      </div>
-
-      <!-- Slider -->
-      <div class="swiper-container slidertoolbar">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image:url(images/slide4.jpg);">
-            <div class="slider-caption">
-              <h2 data-swiper-parallax="-100%">NFT Artwork Locator</h2>
-              <p data-swiper-parallax="-30%">Welcome to NFT Artwork locator. This app will enable you to track and record NFT artworks that you'll see in any physical environment (i.e., subways, smart watch, backpacks, buses, billboards, digital galleries etc.). You'll be able to take photos and create data list of your favorite NFT digital artworks. This app will be a great resources for any artist, designers, blockchain investors and NFT art enthusiasts.</p> 
-
-              <div class="login_bottom">
-                <a href="#" data-popup=".popup-login" class="open-popup">LOG IN</a>
-              </div>
-
-              <div class="signup_bottom">
-                <p>Don't have an account?</p>
-                <a href="#" data-popup=".popup-signup" class="open-popup">SIGN UP</a>
-              </div>
-
-              <!-- <a href="#" data-popup=".popup-signup" class="open-popup">SIGN UP</a>
-              <a href="about.html" class="slider-caption__more" data-swiper-parallax="-60%">LOG IN</a>-->
-            </div>  <!--end div slider-caption-->
-
-          </div> 		   
-        </div>
-      </div>
-
-    </div> <!-- end class page-content -->
+   <div data-role="main" class="mainprofile" id="cyptopunk4012">
+      <h1>Cryptopunk #4120</h1>
+      <div class="NFT-list-image"><img src="img/collections/cryptopunk/cryptopunk4012/cryptopunk4012-full.png" alt=""></div>
+     <div class="mainprofile-details">
 
 
-    <!-- Login Popup -->
-    <div class="popup popup-login">
-      <div class="content-block">
-        <h4>LOGIN</h4>
-        <div class="loginform">
-          <form id="LoginForm" method="post" class="form" data-ajax="false">
-            <input type="text" id="signin-username" name="Username" value="" class="form_input required" placeholder="username" />
-            <input type="password" id="signin-password" name="Password" value="" class="form_input required" placeholder="password" />
-            <div class="forgot_pass"><a href="#" data-popup=".popup-forgot" class="open-popup">Forgot Password?</a></div>
-            <input type="submit" name="submit" class="form_submit" id="submit" value="SIGN IN" />
-          </form>
+       <div class="form-control">
+          <label for="type-nft" class="labelnftprofile">Type</label>
+          <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Insert NFT type">
+       </div>
+       <div class="form-control">
+          <label for="type-nft" class="labelnftprofile">Location</label>
+          <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Type location">
+       </div>
+       <div class="form-control">
+          <label for="type-nft" class="labelnftprofile">Description</label>
+          <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Type description">
+       </div>
+   </div>
+   </div>
+   <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
 
-          <div class="signup_bottom">
-            <p>Don't have an account?</p>
-            <a href="#" data-popup=".popup-signup" class="open-popup">SIGN UP</a>
+
+<!-- EDIT Profile for cryptopunk2824 -->
+
+   <section data-role="page" id="edit-NFT-page-cryptopunk2824">
+      <header data-role="header">
+         <h1>Edit NFT Profile</h1>
+
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#list-page">Save</a></li>
+         </ul>
+      </header>
+
+      <div data-role="main" class="mainprofile" id="cyptopunk2824">
+         <h1>Cryptopunk #4120</h1>
+         <div class="NFT-list-image"><img src="img/collections/cryptopunk/cryptopunk2824/cryptopunk2824-full.png" alt=""></div>
+        <div class="mainprofile-details">
+
+
+          <div class="form-control">
+             <label for="type-nft" class="labelnftprofile">Type</label>
+             <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Insert NFT type">
           </div>
-        </div>
-
-        <div class="close_popup_button">
-          <a href="#" class="close-popup" data-popup=".popup-login"><img src="images/icons/black/menu_close.png" alt="" title="" /></a>
-        </div>
-      </div>
-    </div> <!-- end class popup popup-login -->
-
-
-    <!-- Register Popup -->
-    <div class="popup popup-signup">
-      <div class="content-block">
-        <h4>REGISTER</h4>
-        <div class="loginform">
-          <form id="RegisterForm" method="post">
-            <input type="text" name="Username" value="" class="form_input required" placeholder="Username" />
-            <input type="text" name="Email" value="" class="form_input required" placeholder="Email" />
-            <input type="password" name="Password" value="" class="form_input required" placeholder="Password" />
-            <input type="submit" name="submit" class="form_submit" id="submitregister" value="SIGN UP" />
-          </form>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Forgot Password Popup -->
-    <div class="popup popup-forgot">
-      <div class="content-block">
-        <h4>FORGOT PASSWORD</h4>
-        <div class="loginform">
-          <form id="ForgotForm" method="post">
-            <input type="text" name="Email" value="" class="form_input required" placeholder="email" />
-            <input type="submit" name="submit" class="form_submit" id="submitforgot" value="RESEND PASSWORD" />
-          </form>
-
-          <div class="signup_bottom">
-            <p>Check your email and follow the instructions to reset your password.</p>
+          <div class="form-control">
+             <label for="type-nft" class="labelnftprofile">Location</label>
+             <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Type location">
           </div>
-        </div>
-
-        <div class="close_popup_button">
-            <a href="#" class="close-popup" data-popup=".popup-forgot"><img src="images/icons/black/menu_close.png" alt="" title="" /></a>
-        </div>
+          <div class="form-control">
+             <label for="type-nft" class="labelnftprofile">Description</label>
+             <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Type description">
+          </div>
       </div>
-    </div>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+      </section>
 
-	
-  <script src="js/jquery-2.2.4.min.js"></script>
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery.mobile-1.4.5.min.js"></script>
-  <script src="js/jquery.validate.min.js" ></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/jquery.custom.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/signin.js"></script>
+
+
+
+ <!-- USER Profile -->
+
+   <section data-role="page" id="user-profile-page">
+      <div data-role="main">
+         user profile<br>
+         <a href="#user-edit-page">Edit</a>
+         <br>
+         <a href="#" class="js-logout">Logout</a>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+   <section data-role="page" id="user-edit-page">
+      <header data-role="header">
+         <h1>Edit User</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#list-page">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+        Form
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+
+   <script type="text/template" id="footer-template">
+      <ul class="nav-icon-set">
+        <li><a href="#list-page" data-activateone=".nav-icon-set li:nth-child(1)">
+            <span class="nav-icon"><img class="icon" src="img/icons/home-down.png"></span>
+          <!--  <span class="nav-icon-label">Recent</span>
+        <li><a href="#recent-page" data-activateone=".nav-icon-set li:nth-child(1)"> -->
+         </a></li>
+         <li><a href="#recent-page" data-activateone=".nav-icon-set li:nth-child(2)">
+            <span class="nav-icon"><img class="icon" src="img/icons/map-down.png"></span>
+            <!--   <span class="nav-icon-label">List</span> -->
+         </a></li>
+         <li><a href="#user-profile-page" data-activateone=".nav-icon-set li:nth-child(3)">
+            <span class="nav-icon"><img class="icon" src="img/icons/add-down.png"></span>
+              <!-- <span class="nav-icon-label">Profile</span> -->
+         </a></li>
+         <li><a href="#user-profile-page" data-activateone=".nav-icon-set li:nth-child(3)">
+            <span class="nav-icon"><img class="icon" src="img/icons/users-down.png"></span>
+            <!--<span class="nav-icon-label">Profile</span> -->
+         </a></li>
+      </ul>
+   </script>
 
 </body>
 </html>

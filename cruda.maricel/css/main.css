@@ -1,0 +1,186 @@
+body {
+  margin:0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+}
+/* -- 1fr 1fr 1fr 1fr 1fr 1fr -- then arrange in vetical order
+1st and last is var width - while 2-5 will be fixed width
+    1fr
+    272px
+    272px
+    272px
+    272px
+    1fr; - collaps the similar items -- */
+
+    /*  #site_wrap > div {
+      background-color: blue;}
+     -- this is call out to see the grid behind the site_wrap  -- */
+
+ #site_wrap{
+  background-color: white;
+  height: 100vh;
+  display: grid;
+  grid-template-columns:
+    1fr
+    repeat(4,minmax(0,272px))
+    1fr;
+
+/* ----- copy of old specs
+grid-gap: 0;
+grid-template-rows:
+  104px
+  215px
+  373px
+  373px
+  1fr
+  ;
+grid-template-areas:
+". header header header header ."
+"featured_header featured_header featured_header featured_header featured_header featured_header"
+". featured_main featured_main featured_main featured_profile ."
+". content content content content ."
+"footer footer footer footer footer footer"
+}
+ -----*/
+
+  /*grid-gap: 5px;*/
+  grid-gap: 0;
+ grid-template-rows:
+    104px
+    215px
+    min-content
+    min-content
+    1fr
+    ;
+  grid-template-areas:
+  ". header header header header ."
+  "featured_header featured_header featured_header featured_header featured_header featured_header"
+  ". featured_main featured_main featured_main featured_profile ."
+  ". content content content content ."
+  "footer footer footer footer footer footer"
+}
+
+.header {
+  background-color: white;
+  grid-area:header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.header .logo{
+  width:85px;
+}
+
+.header .nav{
+/*  outline: 1px solid blue; */
+  list-style:none;
+  padding: 0;
+  display: flex;
+}
+
+.header .nav a{
+  text-decoration: none;
+  border: 2px solid grey;
+  border-radius: 20em;
+  color: black;
+  padding: 15px 30px;
+  margin: 0 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header .nav a:hover, .header .nav .active{
+  background-color: navy;
+  color: white;
+
+
+}
+
+.featured_header {
+  background-image:url('img/featuredimage.jpg');
+  grid-area:featured_header;
+  background-size: cover;
+
+}
+
+.featured_main {
+    grid-area:featured_main;
+}
+
+.featured_main h1{
+    color: navy;
+}
+
+.featured_main p{
+    color: navy;
+}
+
+.btn{
+  text-decoration: none;
+  background-color: teal;
+  border: 2px solid teal;
+  border-radius: 20em;
+  color: white;
+  padding: 15px 30px;
+  margin: 0 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  float: right;
+}
+
+.featured_profile {
+  padding: 2em 1em;
+  grid-area:featured_profile;
+}
+
+.content {
+  grid-area:content;
+  display: flex;
+}
+
+.content img{
+  margin: 0 10px 2em 16px;
+}
+
+.footer {
+  background-color: #333;
+  color: grey;
+  text-align: center;
+  padding-top; 2em;
+  grid-area:footer;
+}
+/*mobile responsive*/
+
+@media screen and (max-width:480px){
+  #site_wrap{
+
+    grid-template-areas:
+      "header header header header header header"
+      "featured_header featured_header featured_header featured_header featured_header featured_header"
+      "featured_main featured_main featured_main featured_main featured_main featured_main"
+      "content content content content content content"
+      "footer footer footer footer footer footer"
+}
+.featured_profile{
+  display:none;
+}
+}
+
+/*  .header {
+    background-color: yellow;
+  } */
+
+/*#site_wrap{
+  grid-template-areas:
+  "header header header header header header"
+  "featured_header featured_header featured_header featured_header featured_header featured_header"
+  "featured_main featured_main featured_main featured_main featured_profile featured_main"
+  "content content content content content content"
+  "footer footer footer footer footer footer"
+}
+.feature_profile{
+  display:none;
+}*/
