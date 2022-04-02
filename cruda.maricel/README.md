@@ -16,6 +16,6 @@ Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/csszengarden/index.
 
 Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/App_Design/CRUDA_m03_Explorations.pdf
 
-### NFT ARTWORK LOCATOR (app mobile project) jQuery Mobile
+### NFT ART LOCATOR (app mobile project) jQuery Mobile - updated files based on professor's feedback
 
 Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/index.html
