@@ -17,12 +17,59 @@
 </head>
 <body>
 
+  <!--==================================== -->
+        <!-- LANDING PAGE -->
+  <!--==================================== -->
+
+  <section data-role="page" id="landing-page">
+    <div data-role="main" class="display-flex flex-column">
+
+     <header data-role="header">
+         </header>
+          <div data-role="main" class="mainprofile" id="header">
+         <p class="titleheading">NFT ART LOCATOR</p>
+
+       <div class="content">
+         <p>
+         NFT Locator app offers a way to enable you to  track and record NFT assets printed and displayed anywhere in the world. (i.e., Tokenframe, digital frames and signage,  printed posters, custom luxury purses, billboards, and Digital art galleries). You'll be able to take photos and create data list of your favorites and new NFT assets. It will be a great resources for any artists, designers, blockchain investors and NFT art enthusiasts.
+       </p>
+       </div>
+        <div style="text-align:center;margin-bottom:10vmin">
+      <!--  <img src="img/icons/landing.png" alt="" style="width:50vmin;height:50vmin">
+
+        </div>-->
+
+        <form id="signin-form" class="form" data-ajax="false">
+
+
+           <div class="form-control">
+              <button type="submit" class="form-button" data-role="none"><a href="#signin-page">GET STARTED</button></a>
+           </div>
+
+           <div class="form-control" style="text-align:center;font-size:0.8em;">
+
+           </div>
+        </form>
+     </div>
+  </section>
+
+
+
+  <!--==================================== -->
+        <!-- SIGN-IN page -->
+  <!--==================================== -->
    <section data-role="page" id="signin-page">
-      <div data-role="main" class="display-flex flex-column">
-         <div class="flex-stretch"></div>
-         <div style="text-align:center;margin-bottom:10vmin">
-            <img src="img/categories/azuki.png" alt="" style="width:50vmin;height:50vmin">
-         </div>
+     <div data-role="main" class="display-flex flex-column">
+
+      <header data-role="header">
+          </header>
+           <div data-role="main" class="mainprofile" id="header">
+          <h1>LOG IN</h1>
+        <div class="flex-stretch"></div>
+        <!-- <div style="text-align:center;margin-bottom:10vmin">
+         <img src="img/icons/landing.png" alt="" style="width:50vmin;height:50vmin">
+
+         </div>-->
 
          <form id="signin-form" class="form" data-ajax="false">
             <div class="form-control">
@@ -38,21 +85,30 @@
             <!-- submit -->
 
             <div class="form-control">
-               <button type="submit" class="form-button" data-role="none">Submit</button>
+               <button type="submit" class="form-button" data-role="none"><a href="#categories-page">Submit</button></a>
             </div>
 
             <div class="form-control" style="text-align:center;font-size:0.8em;">
-               <p>New to the app? <a href="#signup-page">Sign Up!</a></p>
+               <p>New to the app? <a href="#signup-page" class="signin-uptext">Sign Up!</a></p>
             </div>
          </form>
       </div>
    </section>
 
-         <!-- signup -->
+   <!--==================================== -->
+         <!-- SIGN-UP page -->
+   <!--==================================== -->
 
    <section data-role="page" id="signup-page">
       <div data-role="main" class="display-flex flex-column">
-         <div class="flex-stretch"></div>
+
+        <header data-role="header">
+            </header>
+             <div data-role="main" class="mainprofile" id="header">
+            <h1>SIGN IN</h1>
+          <div class="flex-stretch"></div>
+
+
          <form id="signup-form" class="form" data-ajax="false">
             <div class="form-control">
                <label for="signup-username" class="form-label">Username</label>
@@ -142,6 +198,7 @@
         <ul>
             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
            <li class="flex-stretch">
+               <li><a href="#user-profile-page"><img class="usericonprofile" src="img/icons/john-mint.png"></a></li>
          </li>
         </ul>
      </header>
@@ -303,10 +360,11 @@
    <section data-role="page" id="list-page">
       <header data-role="header">
          <h1>NFT LIST</h1>
+
          <ul>
-             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
-            <li class="flex-stretch">
-          </li>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#user-profile-page"><img class="usericonprofile" src="img/icons/john-mint.png"></a></li>
          </ul>
       </header>
 
@@ -451,25 +509,25 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
 
 <!--==================================== -->
-      <!--add list NFT -->
+  <!--MODAL PLUS ICON  - add list NFT -->
 <!--==================================== -->
 
       <div class="modal" id="list-add-nft-modal">
          <div class="modal-back" data-deactivate="#list-add-nft-modal"></div>
          <div class="modal-popup">
-            <div class="modal-head">Add nft</div>
+            <div class="modal-head">Add NFT</div>
             <form class="modal-body overscroll" data-ajax="false">
                <div class="form-control">
                   <label for="#list-add-nft-name" class="form-label">name</label>
-                  <input type="text" class="form-input" placeholder="Type a Name" data-role="none" id="list-add-nft-name">
+                  <input type="text" class="form-input" placeholder="Insert name of NFT" data-role="none" id="list-add-nft-name">
                </div>
                <div class="form-control">
                   <label for="#list-add-nft-type" class="form-label">type</label>
-                  <input type="text" class="form-input" placeholder="Type a Type" data-role="none" id="list-add-nft-type">
+                  <input type="text" class="form-input" placeholder="Insert type of NFT" data-role="none" id="list-add-nft-type">
                </div>
                <div class="form-control">
-                  <label for="#list-add-nft-breed" class="form-label">breed</label>
-                  <input type="text" class="form-input" placeholder="Type a Breed" data-role="none" id="list-add-nft-breed">
+                  <label for="#list-add-nft-breed" class="form-label">location</label>
+                  <input type="text" class="form-input" placeholder="Add location" data-role="none" id="list-add-nft-breed">
                </div>
                <div class="form-control">
                   <label for="#list-add-nft-description" class="form-label">description</label>
@@ -556,7 +614,10 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
-<!-- EDIT NFT PROFILE -->
+   <!-- ================================================  -->
+                <!-- EDIT NFT PROFILE -->
+ <!-- ================================================  -->
+
 <!-- EDIT Profile for cryptopnk4012 -->
 
 <section data-role="page" id="edit-NFT-page-cryptopunk4120">
@@ -636,34 +697,149 @@
 
 
 
+<!--==================================== -->
+        <!-- ADDING NFT PAGE -->
+<!--==================================== -->
 
- <!-- USER Profile -->
+
+<section data-role="page" id="adding-nft-page">
+   <header data-role="header">
+      <h1>Add NFT</h1>
+      <ul>
+         <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+         <li class="flex-stretch"></li>
+         <li><a href="#list-page">Save</a></li>
+      </ul>
+   </header>
+
+   <div data-role="main" class="mainprofile" id="camera">
+
+      <div class="camera-image"><img src="img/camera/cameradown.png" alt=""></div>
+    <div class="camera-label">PORTRAIT</div>
+    <div class="camera-label">PHOTO</div>
+      <div class="camera-label">PANORAMIC</div>
+
+<div class="camera-button-container">
+      <div class="camera-button"><img src="img/camera/thumbnaildown.png" alt=""></div>
+      <div class="camera-button"><img src="img/camera/camerabutton-down.png" alt=""></div>
+      <div class="camera-button"><img src="img/camera/reset-down.png" alt=""></div>
+</div>
+
+     </div>
+   </div>
+   <footer data-role="footer" data-template="#footer-template"></footer>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--==================================== -->
+    <!-- USER PROFILE page -->
+<!--==================================== -->
+
 
    <section data-role="page" id="user-profile-page">
-      <div data-role="main">
-         user profile<br>
-         <a href="#user-edit-page">Edit</a>
-         <br>
-         <a href="#signin-page" class="js-logout">Logout</a>
-      </div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
-   </section>
-
-   <section data-role="page" id="user-edit-page">
       <header data-role="header">
-         <h1>Edit User</h1>
+         <h1>User Profile</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
             <li class="flex-stretch"></li>
             <li><a href="#list-page">Save</a></li>
          </ul>
       </header>
-      <div data-role="main">
-        Form
+
+
+      <div data-role="main" class="mainprofile" id="userphoto">
+
+         <div class="users-image"><img src="img/icons/john-mint-profile.png" alt=""></div>
+          <p class="users-namephotolabel">@johnmint</p>
+          <p class="user-namephotoadd">New York, NY</p>
+        <div class="mainprofile-details"  id="userphoto">
+          <p class="labelnftprofile">Name</p>
+          <p class="currentlabelprofile">John Mint</p>
+          <p class="labelnftprofile">Email</p>
+          <p class="currentlabelprofile">johnmint@nft.com</p>
+          <p class="labelnftprofile">Member Since</p>
+          <p class="currentlabelprofile">January 2021</p>
+
+          <p class="labelnftprofile">NFT record and history</p>
+          <p class="currentlabelprofilehistorylist">Bored Ape Yacht Club - 5 <br>
+              Cyberpunks - 3 <br> Doodles - 3 <br>Cool Cats - 2
+</p>
+<hr>
+      <div> <a href="#edit-user-profile-page">Edit</div>
+
+<hr>
+      <div> <a href="#categories-page">Add Categories</div>
+
+<hr>
+        <!--  <div> <a href="#signin-page">Log-out</div> -->
+        <div> <a href="#signin-page" class="js-logout">Logout</a></div>
+        </div>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
+   <!--==================================== -->
+       <!-- EDIT USER PROFILE page -->
+   <!--==================================== -->
+
+
+      <section data-role="page" id="edit-user-profile-page">
+         <header data-role="header">
+            <h1>Edit User Profile</h1>
+            <ul>
+               <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+               <li class="flex-stretch"></li>
+               <li><a href="#list-page">Save</a></li>
+            </ul>
+         </header>
+
+
+         <div data-role="main" class="mainprofile" id="edituserphoto">
+
+            <div class="users-image"><img src="img/icons/john-mint-profile.png" alt=""></div>
+             <p class="users-namephotolabel">@johnmint</p>
+             <p class="user-namephotoadd">New York, NY</p>
+
+           <div class="mainprofile-details"  id="userphoto">
+
+
+             <div class="form-control">
+                 <label for="type-nft" class="labelnftprofile">Name</label>
+                 <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="John Mint">
+              </div>
+              <div class="form-control">
+                 <label for="type-nft" class="labelnftprofile">Email</label>
+                 <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="johnmint@nft.com">
+              </div>
+              <div class="form-control">
+                 <label for="type-nft" class="labelnftprofile">Member Since</label>
+                 <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="January 2021">
+              </div>
+              <div class="form-control">
+                 <label for="type-nft" class="labelnftprofile">NFT record history</label>
+                 <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Bored Ape Yacht Club - 5...">
+              </div>
+
+            </div>
+          </div>
+          <footer data-role="footer" data-template="#footer-template"></footer>
+       </section>
+
+
+
+   <!--==================================== -->
+         <!-- FOOTER TEMPLATE -->
+   <!--==================================== -->
 
    <script type="text/template" id="footer-template">
       <ul class="nav-icon-set">
@@ -676,7 +852,7 @@
             <span class="nav-icon"><img class="icon" src="img/icons/map-down.png"></span>
             <!--   <span class="nav-icon-label">List</span> -->
          </a></li>
-         <li><a href="#user-profile-page" data-activateone=".nav-icon-set li:nth-child(3)">
+         <li><a href="#adding-nft-page" data-activateone=".nav-icon-set li:nth-child(3)">
             <span class="nav-icon"><img class="icon" src="img/icons/add-down.png"></span>
               <!-- <span class="nav-icon-label">Profile</span> -->
          </a></li>

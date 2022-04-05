@@ -48,19 +48,52 @@ h4 {
    font-family: var(--font-sans);
 }
 
+
+.mainprofilelogin {
+  font-size: 1rem;
+
+}
+
+.titleheading {
+font-size: 2rem;
+margin-left: 2rem;
+margin: 2rem:
+padding:2rem;
+
+}
+
+.content {
+  margin: 2rem;
+  font-size: .9rem;
+  line-height: 1.5rem;
+}
+
+
 a {
    /*color: inherit;*/
    color: white;
-   font-weight: bold;
    text-decoration: none;
 }
 a:hover {
   color: var(--color-font);
-   text-decoration: underline;
+   text-decoration: none;
 }
 
 .header ul li a:hover{
  img src="img/categories/azuki.png
+
+}
+
+.signin-uptext {
+  color: white;
+  text-decoration: underline;
+
+}
+
+
+.signin-uptext a:hover{
+  color: #18D7A5;
+  text-decoration: underline;
 
 }
 
@@ -95,7 +128,8 @@ p{
    display: inline-block;
    width: 100%;
    border-width: 0;
-   background-color: var(--color-neutral-light);
+   background-color: #18D7A5;
+   /*background-color: var(--color-neutral-light);*/
    font: inherit;
    padding: 0.5em 1em;
    margin: 0;
@@ -326,15 +360,23 @@ p{
    box-shadow: 0.1em 0.2em 0.4em rgba(0,0,0,0.2);
 }
 
+/* landing page */
 
 
-
+/* maps */
 
 .map-placeholder {
    background-image: url(../img/maps/sfo-zoomout.png);
    background-position: center;
    background-size: cover;
+ }
+
+.markericon{
+     width: 35px;
+     height: 38px;
 }
+
+
 .icon {
   width: 1.2rem;
   height: 1.2rem;
@@ -346,11 +388,6 @@ p{
   height: 20px;
   margin: 5px;
   vertical-align: middle;
-}
-
-.markericon{
-  width: 35px;
-  height: 38px;
 }
 
 
@@ -458,6 +495,114 @@ p{
 
 }
 
+.currentlabelprofilehistorylist {
+  margin-top: 5px;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+
+}
+
+/*Add NFT - Camera */
+
+.camera-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.camera-label {
+  display: inline-block;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0 1em;
+  padding-right: 1rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  list-style-type: none;
+  color: white;
+  width: 32%;
+}
+
+
+.camera-button img {
+  display: inline-block;
+  width: 9rem;
+  padding: 2.9rem;
+
+
+}
+
+.camera-button-container {
+    display: flex;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem;
+    width: .2rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+
+
+/* User Profile */
+
+.users-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: 30%;
+
+}
+
+.users-namephotolabel {
+
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  width: 30%;
+
+
+}
+
+.user-namephotoadd {
+
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  font-size: .7rem;
+
+}
+
+hr {
+  color: #2B2D30;
+}
+
+.usericonprofile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: .5rem;
+  width: 45%;
+
+}
 
 /* footer nav */
 

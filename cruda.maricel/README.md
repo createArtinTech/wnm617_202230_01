@@ -18,4 +18,6 @@ Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/App_Design/CRUDA_m0
 
 ### NFT ART LOCATOR (app mobile project) jQuery Mobile - updated files based on professor's feedback
 
+### 4/4/22 - updated mobile app codes and design
+
 Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/index.html
