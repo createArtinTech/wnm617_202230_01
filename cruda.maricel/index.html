@@ -17,35 +17,42 @@
 </head>
 <body>
 
+
   <!--==================================== -->
         <!-- LANDING PAGE -->
   <!--==================================== -->
 
-  <section data-role="page" id="landing-page">
+  <section data-role="page" id="landing-page" class="landingcover">
     <div data-role="main" class="display-flex flex-column">
 
-     <header data-role="header">
-         </header>
-          <div data-role="main" class="mainprofile" id="header">
-         <p class="titleheading">NFT ART LOCATOR</p>
 
-       <div class="content">
+
+      <p class="titleheading">NFT ART LOCATOR</p>
+
+         <div class="content">
+             <p>
+             NFT Locator app offers a way to enable you to  track and record NFT assets printed and displayed anywhere in the world. (i.e., Tokenframe, digital frames and signage,  printed posters, custom luxury purses, billboards, and Digital art galleries). You'll be able to take photos and create data list of your favorites and new NFT assets. It will be a great resources for any artists, designers, blockchain investors and NFT art enthusiasts.
+           </p>
+           </div>
+
+
+
+    <!--     <p class="titleheading">NFT ART LOCATOR</p> -->
+
+    <!--   <div class="content">
          <p>
          NFT Locator app offers a way to enable you to  track and record NFT assets printed and displayed anywhere in the world. (i.e., Tokenframe, digital frames and signage,  printed posters, custom luxury purses, billboards, and Digital art galleries). You'll be able to take photos and create data list of your favorites and new NFT assets. It will be a great resources for any artists, designers, blockchain investors and NFT art enthusiasts.
        </p>
        </div>
         <div style="text-align:center;margin-bottom:10vmin">
-      <!--  <img src="img/icons/landing.png" alt="" style="width:50vmin;height:50vmin">
+       <img src="img/icons/landing.png" alt="" style="width:50vmin;height:50vmin">
 
         </div>-->
 
         <form id="signin-form" class="form" data-ajax="false">
-
-
            <div class="form-control">
               <button type="submit" class="form-button" data-role="none"><a href="#signin-page">GET STARTED</button></a>
            </div>
-
            <div class="form-control" style="text-align:center;font-size:0.8em;">
 
            </div>
@@ -61,10 +68,17 @@
    <section data-role="page" id="signin-page">
      <div data-role="main" class="display-flex flex-column">
 
-      <header data-role="header">
-          </header>
+       <header data-role="header">
+          <ul>
+             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+             <li class="flex-stretch"></li>
+             <li><a href="#landing-page"><img class="iconclose" src="img/icons/close.png"></a></li>
+            <!-- <li><a href="#list-page">Save</a></li> -->
+          </ul>
+       </header>
+
            <div data-role="main" class="mainprofile" id="header">
-          <h1>LOG IN</h1>
+          <h1 class="titlehead">LOG IN</h1>
         <div class="flex-stretch"></div>
         <!-- <div style="text-align:center;margin-bottom:10vmin">
          <img src="img/icons/landing.png" alt="" style="width:50vmin;height:50vmin">
@@ -103,9 +117,15 @@
       <div data-role="main" class="display-flex flex-column">
 
         <header data-role="header">
-            </header>
+           <ul>
+              <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+              <li class="flex-stretch"></li>
+              <li><a href="#landing-page"><img class="iconclose" src="img/icons/close.png"></a></li>
+             <!-- <li><a href="#list-page">Save</a></li> -->
+           </ul>
+        </header>
              <div data-role="main" class="mainprofile" id="header">
-            <h1>SIGN IN</h1>
+            <h1 class="titlehead">SIGN IN</h1>
           <div class="flex-stretch"></div>
 
 
@@ -128,7 +148,7 @@
 
             <div class="form-control">
                <!-- <button type="button" class="form-button">Submit</button> -->
-               <a href="#list-page" class="form-button">Sign Up</a>
+               <a href="#categories-page" class="form-button">Sign Up</a>
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em;">
                <p>Already have an account? <a href="#signin-page">Sign In!</a></p>
@@ -343,6 +363,17 @@
                   </div>
                  </a>
                 </li>
+
+                <li class="nft-list-item">
+                      <a href="#list-page">
+                        <div class="nft-list-image"><img src="img/icons/addcategory-upcircle.png" alt=""></div>
+                        <div class="nft-list-body">
+                       <div class="NFT-list-name">Add more categories</div>
+                    </div>
+                   </a>
+                  </li>
+
+
          </ul>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
@@ -708,7 +739,8 @@
       <ul>
          <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
          <li class="flex-stretch"></li>
-         <li><a href="#list-page">Save</a></li>
+         <li><a href="#list-page"><img class="iconclose" src="img/icons/close.png"></a></li>
+        <!-- <li><a href="#list-page">Save</a></li> -->
       </ul>
    </header>
 
@@ -752,7 +784,8 @@
          <ul>
             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#list-page">Save</a></li>
+            <li><a href="#" data-rel="next"><img class="iconback" src="img/icons/next.png"></a></li>
+           <!-- <li><a href="#list-page">Save</a></li> -->
          </ul>
       </header>
 
@@ -782,7 +815,7 @@
 
 <hr>
         <!--  <div> <a href="#signin-page">Log-out</div> -->
-        <div> <a href="#signin-page" class="js-logout">Logout</a></div>
+        <div> <a href="#landing-page" class="js-logout">Logout</a></div>
         </div>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
@@ -799,7 +832,7 @@
             <ul>
                <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
                <li class="flex-stretch"></li>
-               <li><a href="#list-page">Save</a></li>
+               <li><a href="#user-profile-page">Save</a></li>
             </ul>
          </header>
 

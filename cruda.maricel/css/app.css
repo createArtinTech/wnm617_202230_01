@@ -54,21 +54,6 @@ h4 {
 
 }
 
-.titleheading {
-font-size: 2rem;
-margin-left: 2rem;
-margin: 2rem:
-padding:2rem;
-
-}
-
-.content {
-  margin: 2rem;
-  font-size: .9rem;
-  line-height: 1.5rem;
-}
-
-
 a {
    /*color: inherit;*/
    color: white;
@@ -178,6 +163,8 @@ p{
    margin: 1em;
    display: flex;
 }
+/* Categories */
+
 
 
 /* maps */
@@ -358,9 +345,37 @@ p{
    text-align: center;
    background-color: white;
    box-shadow: 0.1em 0.2em 0.4em rgba(0,0,0,0.2);
+
+
 }
 
 /* landing page */
+
+div .landingcover  {
+  background-image: url('img/icons/landing.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+.titleheading {
+font-size: 2rem;
+margin-left: 2rem;
+margin-top: 10rem;
+margin: 1rem:
+padding:2rem;
+
+}
+
+.content {
+  margin: 2rem;
+  font-size: .9rem;
+  line-height: 1.8rem;
+}
+
+
 
 
 /* maps */
@@ -391,7 +406,12 @@ p{
 }
 
 
-
+.iconclose{
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  vertical-align: middle;
+}
 
 /* nft List */
 .nft-list {
@@ -518,7 +538,7 @@ p{
   display: inline-block;
   text-align: center;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0 1em;
@@ -543,10 +563,10 @@ p{
 .camera-button-container {
     display: flex;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: .5rem;
+    padding: .2rem;
     width: .2rem;
     align-items: center;
     justify-content: center;
@@ -592,7 +612,9 @@ p{
 }
 
 hr {
-  color: #2B2D30;
+
+   border-top: 1px solid #2B2D30;
+   opacity: 0.2;
 }
 
 .usericonprofile {
