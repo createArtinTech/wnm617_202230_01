@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Susanne Mcpherson",
+    "username": "Digigene",
+    "email": "Digigene@gmail.com",
+    "address": "Whitmer, Oregon",
+    "password": "md5(pass)",
+    "one_liner": "Cillum nostrud amet labore ex duis labore ut irure proident.",
+    "member_since": "2022-03-21"
+  },
+  {
+    "id": 2,
+    "name": "Hood Koch",
+    "username": "Qaboos",
+    "email": "Qaboos@gmail.com",
+    "address": "Fairview, Puerto Rico",
+    "password": "md5(pass)",
+    "one_liner": "Minim elit excepteur incididunt nisi exercitation id labore ex.",
+    "member_since": "2022-04-08"
+  },
+  {
+    "id": 3,
+    "name": "Lila Drake",
+    "username": "Zensor",
+    "email": "Zensor@gmail.com",
+    "address": "Bainbridge, California",
+    "password": "md5(pass)",
+    "one_liner": "Adipisicing consequat Lorem ea minim sunt elit nulla elit duis pariatur consectetur ipsum.",
+    "member_since": "2022-03-20"
+  },
+  {
+    "id": 4,
+    "name": "Davidson Watkins",
+    "username": "Voratak",
+    "email": "Voratak@gmail.com",
+    "address": "Shrewsbury, Nevada",
+    "password": "md5(pass)",
+    "one_liner": "Aliquip laborum incididunt dolore labore laboris exercitation excepteur ut qui cillum.",
+    "member_since": "2022-03-19"
+  },
+  {
+    "id": 5,
+    "name": "Banks Doyle",
+    "username": "Pearlessa",
+    "email": "Pearlessa@gmail.com",
+    "address": "Marenisco, Texas",
+    "password": "md5(pass)",
+    "one_liner": "Adipisicing duis cupidatat duis id in nostrud et velit excepteur dolor irure fugiat et.",
+    "member_since": "2022-01-06"
+  },
+  {
+    "id": 6,
+    "name": "Key Finley",
+    "username": "Plasmosis",
+    "email": "Plasmosis@gmail.com",
+    "address": "Thatcher, South Carolina",
+    "password": "md5(pass)",
+    "one_liner": "Aliqua enim fugiat est est ex et tempor pariatur.",
+    "member_since": "2022-01-07"
+  },
+  {
+    "id": 7,
+    "name": "Frank Stein",
+    "username": "Hinway",
+    "email": "Hinway@gmail.com",
+    "address": "Oberlin, New Hampshire",
+    "password": "md5(pass)",
+    "one_liner": "Duis magna exercitation qui irure id amet adipisicing anim nulla sint nisi occaecat qui pariatur.",
+    "member_since": "2022-04-01"
+  },
+  {
+    "id": 8,
+    "name": "Bentley Fowler",
+    "username": "Kongle",
+    "email": "Kongle@gmail.com",
+    "address": "Dargan, Indiana",
+    "password": "md5(pass)",
+    "one_liner": "Nisi nisi aute cillum ea velit velit et voluptate ex veniam esse ullamco.",
+    "member_since": "2022-03-21"
+  },
+  {
+    "id": 9,
+    "name": "Rosalinda Castillo",
+    "username": "Earthplex",
+    "email": "Earthplex@gmail.com",
+    "address": "Grahamtown, Utah",
+    "password": "md5(pass)",
+    "one_liner": "Deserunt incididunt Lorem magna deserunt labore laborum ad Lorem.",
+    "member_since": "2022-02-24"
+  },
+  {
+    "id": 10,
+    "name": "Ola Lynn",
+    "username": "Recrisys",
+    "email": "Recrisys@gmail.com",
+    "address": "Neibert, Arizona",
+    "password": "md5(pass)",
+    "one_liner": "Enim anim ea ullamco ea.",
+    "member_since": "2022-03-11"
+  }
+]
