@@ -21,3 +21,9 @@ Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/App_Design/CRUDA_m0
 ### 4/4/22 - updated mobile app codes and design
 
 Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/index.html
+
+
+### 4/11/22 - Add database files - data_nft
+
+Note: added (userdata, nftlistdata, locationdata) json,sql, (auth/api)php, js files 
+Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/data_nft/api.php
