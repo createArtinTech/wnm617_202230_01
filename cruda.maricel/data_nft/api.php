@@ -49,7 +49,7 @@ function makeQuery($c,$ps,$p,$makeResults=true) {
 /*
 "SELECT * FROM locationdata WHERE nft_id = ?",
 "SELECT * FROM nftlistdata  WHERE id = ?",
-"SELECT * FROM userdata WHERE user_name = ?",
+"SELECT * FROM userdata WHERE id = ?",
 */
 
 die(
@@ -57,7 +57,7 @@ die(
       makeQuery(
          makeConn(),
          "SELECT * FROM nftlistdata  WHERE id = ?",
-         [8]
+         [2]
       )
    )
 );
