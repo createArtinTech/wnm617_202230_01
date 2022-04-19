@@ -19,7 +19,6 @@ function fetchAll($r) {
    return $a;
 }
 
-
 /*
 $c = connection
 $ps = prepared statement
@@ -37,8 +36,8 @@ function makeQuery($c,$ps,$p,$makeResults=true) {
       $r = $makeResults ? fetchAll($stmt) : [];
 
       return [
-         // "statement"=>$ps,
-         // "params"=>$p,
+         //"statement"=>$ps,
+        // "params"=>$p,
          "result"=>$r
       ];
    } catch(PDOException $e) {
@@ -46,18 +45,62 @@ function makeQuery($c,$ps,$p,$makeResults=true) {
    }
 }
 
+function makeStatement($data) {
+   $c = makeConn();
+   $t = $data->type;
+   $p = $data->params;
+
+
+switch($t) {
+
+    case "users_all":
+      return makeQuery($c, "SELECT * FROM `userdata`", $p);
+
+   case "nfts_all":
+      return makeQuery($c, "SELECT * FROM `nftlistdata`", $p);
+
+   case "locations_all":
+      return makeQuery($c, "SELECT * FROM `locationdata`", $p);
+
+
+
+   case "user_by_id":
+      return makeQuery($c, "SELECT * FROM `userdata` WHERE `id` = ?", $p);
+
+   case "nft_by_id":
+      return makeQuery($c, "SELECT * FROM `nftlistdata` WHERE `id` = ?", $p);
+
+   case "location_by_id":
+      return makeQuery($c, "SELECT * FROM `locationdata` WHERE `id` = ?", $p);
+
+
+case "nfts_by_user_id":
+      return makeQuery($c, "SELECT * FROM `userdata` WHERE `user_name` = ?", $p);
+
+case "locations_by_nft_id":
+      return makeQuery($c, "SELECT * FROM `locationdata` WHERE `nft_id` = ?", $p);
+
+
+case "check_signin":
+         return makeQuery($c, "SELECT id from `userdata` WHERE `user_name` = ? AND `password` = md5(?)", $p);
+
+         default:
+            return ["error"=> "No Matched Type"];
+
+
+   }
+} 
+
 /*
-"SELECT * FROM locationdata WHERE nft_id = ?",
-"SELECT * FROM nftlistdata  WHERE id = ?",
+"SELECT * FROM userdata",
 "SELECT * FROM userdata WHERE id = ?",
+"SELECT * FROM nftlistdata WHERE user_id = ?",
+"SELECT * FROM locationdata WHERE user_id = ?",
 */
 
-die(
-   json_encode(
-      makeQuery(
-         makeConn(),
-         "SELECT * FROM nftlistdata  WHERE id = ?",
-         [2]
-      )
-   )
+$data = json_decode(file_get_contents("php://input"));
+
+echo json_encode(
+   makeStatement($data),
+   JSON_NUMERIC_CHECK
 );

@@ -5,6 +5,29 @@ $(() => {
    // EVENT DELEGATION
    $(document)
 
+
+   .on("pagecontainerbeforeshow", function(event, ui){
+      console.log(ui.toPage[0].id)
+
+      //PAGE ROUTING
+
+      switch(ui.toPage[0].id) {
+         case "recent-page": RecentPage(); break;
+         case "landing-page": LandingPage(); break;
+         case "signin-page": SigninPage(); break;
+         case "signup-page": SignupPage(); break;
+         case "categories-page": CategoriesPage(); break;
+         case "list-page": ListPage(); break;
+         case "list-add-nft-modal": ModalPage(); break;
+         case "nft-profile-page": NFTProfilePage(); break;
+         case "edit-NFT-profile-page": EditNFTProfilePage(); break;
+         case "adding-nft-page": AddingNFTPage(); break;
+         case "user-profile-page": UserProfilePage(); break;
+         case "edit-user-profile-page": EditUserProfilePage(); break;
+      }
+   })
+
+
    // FORM SUBMISSIONS
    .on("submit", "#signin-form", function(e) {
       e.preventDefault();

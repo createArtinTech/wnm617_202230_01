@@ -11,9 +11,15 @@
    <link rel="stylesheet" href="css/app.css">
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
-   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+   
    <script src="js/app.js"></script>
    <script src="js/signin.js"></script>
+   <script src="js/functions.js"></script>
+   <script src="js/pages.js"></script>
+   <script src="js/parts.js"></script>
+
+   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+
 </head>
 <body>
 
@@ -70,7 +76,7 @@
 
        <header data-role="header">
           <ul>
-             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+             
              <li class="flex-stretch"></li>
              <li><a href="#landing-page"><img class="iconclose" src="img/icons/close.png"></a></li>
             <!-- <li><a href="#list-page">Save</a></li> -->
@@ -78,14 +84,14 @@
        </header>
 
            <div data-role="main" class="mainprofile" id="header">
-          <h1 class="titlehead">LOG IN</h1>
+          <h1 class="titlehead">SIGN IN</h1>
         <div class="flex-stretch"></div>
         <!-- <div style="text-align:center;margin-bottom:10vmin">
          <img src="img/icons/landing.png" alt="" style="width:50vmin;height:50vmin">
 
          </div>-->
 
-         <form id="signin-form" class="form" data-ajax="false">
+         <form id="signin-form2" class="form" data-ajax="false">
             <div class="form-control">
                <label for="signin-username" class="form-label">Username</label>
                <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Type your Username">
@@ -118,14 +124,14 @@
 
         <header data-role="header">
            <ul>
-              <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+              
               <li class="flex-stretch"></li>
               <li><a href="#landing-page"><img class="iconclose" src="img/icons/close.png"></a></li>
              <!-- <li><a href="#list-page">Save</a></li> -->
            </ul>
         </header>
              <div data-role="main" class="mainprofile" id="header">
-            <h1 class="titlehead">SIGN IN</h1>
+            <h1 class="titlehead">SIGN UP</h1>
           <div class="flex-stretch"></div>
 
 
@@ -158,7 +164,12 @@
       </div>
    </section>
 
-  <!-- recent page (map page)-->
+
+
+   <!--==================================== -->
+         <!-- RECENT page -  (map page)-->
+   <!--==================================== -->
+ 
 
    <section data-role="page" id="recent-page">
      <header data-role="header">
@@ -404,7 +415,7 @@
          <ul class="nft-list">
             <!-- li.nft-list-item*10>a[href=#nft-profile-page]>(div.nft-list-image>img[src='https://via.placeholder.com/400x400/?text=nft$'])+div.nft-list-body>(div.nft-list-name>{nft $})+(div.nft-list-type>{Type})+(div.nft-list-breed>{Breed}) -->
             <li class="nft-list-item">
-               <a href="#nft-profile-page-crypotopunk4012">
+               <a href="#nft-profile-page">
                   <div class="nft-list-image"><img src="img/collections/cryptopunk/cryptopunk4012/cryptopunk4012-thumb.png" alt=""></div>
                   <div class="nft-list-body">
                      <div class="NFT-list-name">Cryptopunk #4120</div>
@@ -583,15 +594,13 @@
 <!--==================================== -->
 
 
-<!--crypotopunk4012"-->
-
-   <section data-role="page" id="nft-profile-page-crypotopunk4012">
+<section data-role="page" id="nft-profile-page">
       <header data-role="header">
          <h1>NFT Profile</h1>
          <ul>
             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#edit-NFT-page-cryptopunk4120">Edit</a></li>
+            <li><a href="#edit-NFT-profile-page">Edit</a></li>
          </ul>
       </header>
 
@@ -613,6 +622,37 @@
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
+
+<!--crypotopunk4012"-->
+
+ <!--  <section data-role="page" id="nft-profile-page-crypotopunk4012">
+      <header data-role="header">
+         <h1>NFT Profile</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#edit-NFT-profile-page">Edit</a></li>
+         </ul>
+      </header>
+
+      <div data-role="main" class="mainprofile" id="cyptopunk4012">
+         <h1>Cryptopunk #4120</h1>
+         <div class="NFT-list-image"><img src="img/collections/cryptopunk/cryptopunk4012/cryptopunk4012-full.png" alt=""></div>
+        <div class="mainprofile-details">
+          <p class="labelnftprofile">Type</p>
+          <p class="currentlabelprofile">Cryptopunk</p>
+          <p class="labelnftprofile">Location</p>
+          <p class="currentlabelprofile">San Francisco Intl. Airport, CA</p>
+          <p class="labelnftprofile">Description</p>
+          <p class="currentlabelprofile">Cryptopunk collection - luggage brand collection.
+            Seen in SFO airport.</p>
+
+      <div> <a href="#categories-page">More categories</div>
+
+        </div>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer> 
+   </section> -->
 
 <!--crypotopunk2824-->
 
@@ -649,9 +689,9 @@
                 <!-- EDIT NFT PROFILE -->
  <!-- ================================================  -->
 
-<!-- EDIT Profile for cryptopnk4012 -->
+<!-- EDIT Profile  -->
 
-<section data-role="page" id="edit-NFT-page-cryptopunk4120">
+<section data-role="page" id="edit-NFT-profile-page">
    <header data-role="header">
       <h1>Edit NFT Profile</h1>
       <!--  <ul>
@@ -678,11 +718,11 @@
        </div>
        <div class="form-control">
           <label for="type-nft" class="labelnftprofile">Location</label>
-          <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Type location">
+          <input type="text" id="location-nft" data-role="none" class="form-input" placeholder="Type location">
        </div>
        <div class="form-control">
           <label for="type-nft" class="labelnftprofile">Description</label>
-          <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Type description">
+          <input type="text" id="description-nft" data-role="none" class="form-input" placeholder="Type description">
        </div>
    </div>
    </div>
@@ -690,9 +730,53 @@
    </section>
 
 
+
+
+   <!-- EDIT Profile for cryptopnk4012 -->
+
+<!--<section data-role="page" id="edit-NFT-page-cryptopunk4120">
+   <header data-role="header">
+      <h1>Edit NFT Profile</h1> -->
+      <!--  <ul>
+           <li><a href="#" data-rel="back">Back</a></li>
+           <li class="flex-stretch"></li>
+           <li><a href="#list-page">Save</a></li>
+        </ul> -->
+    <!--  <ul>
+         <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+         <li class="flex-stretch"></li>
+         <li><a href="#list-page">Save</a></li>
+      </ul>
+     </header>
+
+   <div data-role="main" class="mainprofile" id="cyptopunk4012">
+      <h1>Cryptopunk #4120</h1>
+      <div class="NFT-list-image"><img src="img/collections/cryptopunk/cryptopunk4012/cryptopunk4012-full.png" alt=""></div>
+     <div class="mainprofile-details">
+
+
+       <div class="form-control">
+          <label for="type-nft" class="labelnftprofile">Type</label>
+          <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Insert NFT type">
+       </div>
+       <div class="form-control">
+          <label for="type-nft" class="labelnftprofile">Location</label>
+          <input type="text" id="location-nft" data-role="none" class="form-input" placeholder="Type location">
+       </div>
+       <div class="form-control">
+          <label for="type-nft" class="labelnftprofile">Description</label>
+          <input type="text" id="description-nft" data-role="none" class="form-input" placeholder="Type description">
+       </div>
+   </div>
+   </div>
+   <footer data-role="footer" data-template="#footer-template"></footer>
+   </section> -->
+
+
+
 <!-- EDIT Profile for cryptopunk2824 -->
 
-   <section data-role="page" id="edit-NFT-page-cryptopunk2824">
+ <!--  <section data-role="page" id="edit-NFT-page-cryptopunk2824">
       <header data-role="header">
          <h1>Edit NFT Profile</h1>
 
@@ -726,7 +810,7 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
       </section>
 
-
+-->
 
 <!--==================================== -->
         <!-- ADDING NFT PAGE -->
@@ -761,11 +845,6 @@
    </div>
    <footer data-role="footer" data-template="#footer-template"></footer>
 </section>
-
-
-
-
-
 
 
 
@@ -848,19 +927,19 @@
 
              <div class="form-control">
                  <label for="type-nft" class="labelnftprofile">Name</label>
-                 <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="John Mint">
+                 <input type="text" id="user_name_profile" data-role="none" class="form-input" placeholder="John Mint">
               </div>
               <div class="form-control">
                  <label for="type-nft" class="labelnftprofile">Email</label>
-                 <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="johnmint@nft.com">
+                 <input type="text" id="user_email" data-role="none" class="form-input" placeholder="johnmint@nft.com">
               </div>
               <div class="form-control">
                  <label for="type-nft" class="labelnftprofile">Member Since</label>
-                 <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="January 2021">
+                 <input type="text" id="memberid" data-role="none" class="form-input" placeholder="January 2021">
               </div>
               <div class="form-control">
                  <label for="type-nft" class="labelnftprofile">NFT record history</label>
-                 <input type="text" id="type-nft" data-role="none" class="form-input" placeholder="Bored Ape Yacht Club - 5...">
+                 <input type="text" id="recordhistory" data-role="none" class="form-input" placeholder="Bored Ape Yacht Club - 5...">
               </div>
 
             </div>

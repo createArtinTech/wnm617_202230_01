@@ -152,6 +152,14 @@ p{
 #signup-form {
    padding: 1em;
 }
+
+
+#signin-form2,
+#signup-form2 {
+   padding: 1em;
+}
+
+
 #recent-search {
    box-shadow: 0.1em 0.2em 0.4em rgba(0,0,0,0.3);
 }
@@ -407,8 +415,8 @@ padding:2rem;
 
 
 .iconclose{
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   margin: 5px;
   vertical-align: middle;
 }
