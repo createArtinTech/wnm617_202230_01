@@ -1,10 +1,10 @@
 /*
-
 const makeNFTList = templater (o=>`
  <div>${o.name}</div>
- `); 
+ `); */
 
-*/
+
+
 
 const makeNFTList = templater (o=>`
 <li class="nft-list-item">

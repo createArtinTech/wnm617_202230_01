@@ -37,7 +37,23 @@ body {
    font-family: var(--font-sans);
    background-color: var(--color-navigation-body);
 
+}
 
+.cover {
+      width:  100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: -1;
+      
+}
+
+.logo {
+   text-align: center;
+   width: 10rem;
+  
+   margin-top:  45vmin;
+   margin-left: 2rem;
 }
 
 h1,
@@ -84,6 +100,9 @@ a:hover {
 
 p{
   color: white;
+  opacity: 2;
+  line-height: 1.5rem;
+  font-size: .8rem;
 }
 
 
@@ -123,6 +142,9 @@ p{
    text-decoration: none;
    border-radius: 1em;
 }
+
+
+
 .hotdog {
    background-color: white;
    border-radius: 2em;
@@ -339,23 +361,27 @@ p{
 /* floater */
 .floater { position: absolute; }
 .floater.top { top:1rem }
-.floater.right { right:1rem }
+.floater.right { right:2.0rem }
 .floater.bottom { bottom:1rem }
 .floater.left { left:1rem }
 
 
 .circle-button {
-   border-radius: 2rem;
-   line-height: 3rem;
-   font-size: 2.5em;
-   width: 3rem;
-   height: 3rem;
+   border-radius: 3rem;
+   line-height:2rem;
+   font-size: 2em;
+   width: 2rem;
+   height: 2rem;
    text-align: center;
-   background-color: white;
+   background-color: #18D7A5;
+  /* background-color: white; */
    box-shadow: 0.1em 0.2em 0.4em rgba(0,0,0,0.2);
 
-
 }
+
+
+
+
 
 /* landing page */
 

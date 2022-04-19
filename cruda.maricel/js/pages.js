@@ -71,15 +71,14 @@ const CategoriesPage = async() => {
 const ListPage = async() => {
     //destructuring
 
-    let {result:nfts} = await query({
+ let {result:nfts} = await query({
         type:'nfts_by_user_id',
         params:[sessionStorage.userId]
     })
 
          console.log(nfts)
     $("#list-page .nft-list").html(makeNFTList(nfts));
-       
-    
+         
 }
 
 const ModalPage = async() => {
