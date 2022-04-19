@@ -33,6 +33,6 @@ Link: https://crudacreativeart.tech/aau/wnm617/cruda.maricel/data_nft/api.php
 
 Note: This version of codes consist of calling out the full arrays of the (user,nft-objects, and locations data). You'll see how it was called out in the console by selecting the footer label (location, add (+) and user icons)
 
-I was able to follow the instructions and successfully run the console without major errors but I was having an issue with connecting the assigned data to show in the list page. Hoping to get some help on this. Thanks
+I was able to follow the instructions and successfully run the console without major errors but I was having an issue with connecting the assigned data to show in the list page. I've tried every possible way but it was unsuccessful. Hoping to get some help on this. Thanks
 
 https://crudacreativeart.tech/aau/wnm617/cruda.maricel/index.html
