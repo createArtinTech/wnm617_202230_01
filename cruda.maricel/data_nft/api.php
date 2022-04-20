@@ -75,10 +75,25 @@ switch($t) {
 
 
 case "nfts_by_user_id":
-      return makeQuery($c, "SELECT * FROM `userdata` WHERE `user_name` = ?", $p);
+      return makeQuery($c, "SELECT * FROM `nftlistdata` WHERE `user_id` = ?", $p);
 
 case "locations_by_nft_id":
       return makeQuery($c, "SELECT * FROM `locationdata` WHERE `nft_id` = ?", $p);
+
+/*
+
+case "recent_nft_locations";
+   return makeQuery($c, "SELECT *
+      FROM `nftlistdata` n
+      JOIN (
+         SELECT lg. *
+         FROM `locationdata` lg
+
+      ) l
+      ON n.id = l.nft_id
+      WHERE n.user_id = ?
+      ", $p);
+*/
 
 
 case "check_signin":
