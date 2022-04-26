@@ -29,13 +29,6 @@
 </head>
 <body>
 
-     <!--==================================== -->
-
-      AIzaSyCVTxIj57oz51yTN93RkGB6Ap_iPsxXsPw
-
-    <!--==================================== -->
-
-
 
 
 
@@ -209,7 +202,7 @@
         <ul>
           <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
           <li class="flex-stretch">
-          <li><a href="#" data-rel="next"><img class="iconback" src="img/icons/next.png"></a></li>
+           <li><a href="#edit-NFT-profile-page">Edit</a></li>
          </li>
         </ul>
      </header>
@@ -450,9 +443,9 @@
 
       <div data-role="main">
          <!-- ul>li*10>a[href=#nft-profile-page]>{nft $} -->
-         <ul class="nft-list">
+        <ul class="nft-list"></ul>
             <!-- li.nft-list-item*10>a[href=#nft-profile-page]>(div.nft-list-image>img[src='https://via.placeholder.com/400x400/?text=nft$'])+div.nft-list-body>(div.nft-list-name>{nft $})+(div.nft-list-type>{Type})+(div.nft-list-breed>{Breed}) -->
-            <li class="nft-list-item">
+         <!-- <li class="nft-list-item">
                <a href="#nft-profile-page">
                   <div class="nft-list-image"><img src="img/collections/cryptopunk/cryptopunk4012/cryptopunk4012-thumb.png" alt=""></div>
                   <div class="nft-list-body">
@@ -606,7 +599,7 @@
 
 
 
-         </ul>
+         </ul> -->
 
          <div class="floater bottom right circle-button" data-activate="#list-add-nft-modal">&plus;</div>
       </div>
@@ -658,15 +651,32 @@
 
 <section data-role="page" id="nft-profile-page">
       <header data-role="header">
-         <h1>NFT Profile</h1>
+         <h1></h1>
          <ul>
             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
             <li class="flex-stretch"></li>
+          
             <li><a href="#edit-NFT-profile-page">Edit</a></li>
          </ul>
       </header>
+      <div data-role="main">
+         <div class="nft-profile-top">
+         </div>
+         <div class="nft-profile-nav">
+            <div class="active">Map</div>
+            <div>Description</div>
+         </div>
+         <div class="nft-profile-bottom">
+            <div class="nft-profile-map active">
+               <div class="map map-placeholder"></div>
+            </div>
+            <div class="nft-profile-description"></div>
+         
+         </div>
+      </div>
 
-      <div data-role="main" class="mainprofile" id="cyptopunk4012">
+
+    <!--  <div data-role="main" class="mainprofile" id="cyptopunk4012">
          <h1>Cryptopunk #4120</h1>
          <div class="NFT-list-image"><img src="img/collections/cryptopunk/cryptopunk4012/cryptopunk4012-full.png" alt=""></div>
         <div class="mainprofile-details">
@@ -681,7 +691,9 @@
       <div> <a href="#categories-page">More categories</div>
 
         </div>
-      </div>
+      </div> -->
+
+   
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
@@ -925,7 +937,7 @@
          <ul>
             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" data-rel="next"><img class="iconback" src="img/icons/next.png"></a></li>
+             <li><a href="#edit-user-profile-page">Edit</a></li>
            <!-- <li><a href="#list-page">Save</a></li> -->
          </ul>
       </header>
@@ -934,6 +946,8 @@
       <div data-role="main" class="mainprofile" id="userphoto">
 
          <div class="users-image"><img src="img/icons/john-mint-profile.png" alt=""></div>
+
+         <!--
           <p class="users-namephotolabel">@johnmint</p>
           <p class="user-namephotoadd">New York, NY</p>
         <div class="mainprofile-details"  id="userphoto">
@@ -954,9 +968,9 @@
 <hr>
       <div> <a href="#categories-page">Add Categories</div>
 
-<hr>
+<hr> -->
         <!--  <div> <a href="#signin-page">Log-out</div> -->
-        <div> <a href="#landing-page" class="js-logout">Logout</a></div>
+   <!--     <div> <a href="#landing-page" class="js-logout">Logout</a></div> -->
         </div>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>

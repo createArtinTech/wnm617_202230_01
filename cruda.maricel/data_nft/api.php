@@ -65,7 +65,8 @@ switch($t) {
 
 
    case "user_by_id":
-      return makeQuery($c, "SELECT * FROM `userdata` WHERE `id` = ?", $p);
+      return makeQuery($c, "SELECT `name`,`address`,`email`,`user_name` FROM `userdata` WHERE `id` = ?", $p);
+      /*return makeQuery($c, "SELECT `id`,`name`,`email`,`address`,`username` FROM `userdata` WHERE `id` = ?", $p);*/
 
    case "nft_by_id":
       return makeQuery($c, "SELECT * FROM `nftlistdata` WHERE `id` = ?", $p);

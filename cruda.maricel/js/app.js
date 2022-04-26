@@ -24,6 +24,8 @@ $(() => {
          case "adding-nft-page": AddingNFTPage(); break;
          case "user-profile-page": UserProfilePage(); break;
          case "edit-user-profile-page": EditUserProfilePage(); break;
+         case "nft-profile-description": NFTProfileDescription(); break;
+         
       }
    })
 
@@ -39,6 +41,29 @@ $(() => {
    .on("click", ".js-logout", function() {
       sessionStorage.removeItem("userId");
       checkUserId();
+   })
+
+   .on("click", ".js-nft-jump", function() {
+      try {
+         //e.preventDefault();
+         sessionStorage.nftId = $(this).data('id');
+         //$.mobile.navigate("#nft-profile-page");
+      } catch(e) {
+         console.log("No id detected");
+      }
+   })
+
+
+
+   .on("click", ".nft-profile-nav>div", function(e) {
+      let id = $(this).index();
+      $(this).parent()
+      .next().children().eq(id)
+      .addClass("active")
+      .siblings().removeClass("active")
+       $(this)
+      .addClass("active")
+      .siblings().removeClass("active")
    })
 
 

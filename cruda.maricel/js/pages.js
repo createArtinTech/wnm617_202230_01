@@ -108,12 +108,27 @@ const ListPage = async() => {
 const ModalPage = async() => {
 
 }
+
+
 const NFTProfilePage = async() => {
 
+    let {result:nfts} = await query({
+            type:'nft_by_id',
+            params:[sessionStorage.nftId]
+        })
+
+    let [nft] = nfts;
+    $(".nft-profile-top").css({"background-image":`url(${nft.img})`});
+    $("#nft-profile-page h1").html(nft.name);
+   // $(".nft-profile-description").html(makeNFTProfileDescription(nft));
 }
+
+
 const EditNFTProfilePage = async() => {
 
 }
+
+
 const AddingNFTPage = async() => {
       query({
         type:'nfts_all',
@@ -122,17 +137,22 @@ const AddingNFTPage = async() => {
         console.log(d)
     })
 }
-const UserProfilePage = async() => {
-    query({
-        type:'users_all',
-        params:["user", "pass"]
-    }).then(d=>{
-        console.log(d)
-    })
 
+const UserProfilePage = async() => {
+     let {result:users} = await query({
+    type:'user_by_id',
+    params:[sessionStorage.userId]
+    })
+    let [user] = users;
+
+    console.log(user)
+
+    $("#user-profile-page [data-role='main']").html(makeUserProfilePage(user));
+    
 }
 
 
 const EditUserProfilePage = () => {
 
 }
+
