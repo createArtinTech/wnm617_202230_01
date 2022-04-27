@@ -45,3 +45,12 @@ const makeNFTProfilePage = o => `
     `;
 
 
+const makeNFTProfileDescription = o => `
+    <h2>${o.name}</h2>
+    <div>${o.type}</div>
+    <div>${o.category}</div>
+<a href="#nft-profile-page">Edit<a/>
+
+    `;
+
+

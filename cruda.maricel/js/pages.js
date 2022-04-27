@@ -131,7 +131,7 @@ const NFTProfilePage = async() => {
     let [nft] = nfts;
     $(".nft-profile-top").css({"background-image":`url(${nft.img})`});
     $("#nft-profile-page h1").html(nft.name);
-   // $(".nft-profile-description").html(makeNFTProfileDescription(nft));
+    $(".nft-profile-description").html(makeNFTProfileDescription(nft));
 }
 
 
@@ -161,7 +161,6 @@ const UserProfilePage = async() => {
     $("#user-profile-page [data-role='main']").html(makeUserProfilePage(user));
     
 }
-
 
 const EditUserProfilePage = () => {
 

@@ -90,7 +90,7 @@ case "recent_nft_locations":
       ON a.id = l.nft_id
       ", $p); 
 
-/*
+
 
 case "recent_nft_locations";
    return makeQuery($c, "SELECT *
@@ -103,7 +103,7 @@ case "recent_nft_locations";
       ON n.id = l.nft_id
       WHERE n.user_id = ?
       ", $p);
-*/
+
 
 
 case "check_signin":
