@@ -58,15 +58,26 @@ query({
 
 */
 
-// Connection to database //
 
-const RecentPage = () => {
-
-  /*  let {result} = await query({
+ /*  let {result} = await query({
         type:'recent_nft_locations',
         params:[sessionStorage.userId]
     });
         console.log(result); */
+
+
+
+// Connection to database //
+
+const RecentPage = () => {
+
+ 
+//let {result} = await query({
+//    type:'recent_nft_locations',
+//    params:[sessionStorage.userId]
+//    });
+ //         console.log(result); 
+
 }
 
 const LandingPage = async() => {
