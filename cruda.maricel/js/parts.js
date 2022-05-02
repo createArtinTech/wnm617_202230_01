@@ -30,7 +30,7 @@ const makeUserProfilePage = o => `
     <div>
         <div><strong>Username</strong> @${o.username}</div>
         <div><strong>Email</strong> ${o.email}</div>
-        <a href="#signin-page">Log-out<a/>
+        <a href="#landing-page">Log-out<a/>
     </div>
 
     `;
@@ -52,5 +52,3 @@ const makeNFTProfileDescription = o => `
 <a href="#nft-profile-page">Edit<a/>
 
     `;
-
-

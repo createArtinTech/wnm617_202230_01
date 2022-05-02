@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>nft Tracker</title>
+   <title>NFT Art Locator</title>
 
    <base href="/aau/wnm617/cruda.maricel/">
 
@@ -17,14 +17,15 @@
    <script src="js/functions.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
+   <script src="js/maps.js"></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 
-
-<!--<script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVTxIj57oz51yTN93RkGB6Ap_iPsxXsPw"
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC52nkQGfLAU30wg4WHyJGw4YlTX7YqJMg"
       defer
-    ></script> -->
+    ></script>
+
 
 </head>
 <body>
@@ -207,18 +208,19 @@
         </ul>
      </header>
 
-      <div data-role="main" class="map-placeholder">
+      <div data-role="main">
+          <div class="map"></div>
          <div class="recent-search">
             <form class="hotdog flex-stretch" data-ajax="false" id="recent-search">
                <input type="search" data-role="none" placeholder="Search">
             </form>
             <div class="flex-none" style="line-height:3rem;padding:0 0.5em">
-               <img src="img/maps/sfo-zoomout.png" style="vertical-align: middle;" alt="" class="icon">
+              <!--  <img src="img/maps/sfo-zoomout.png" style="vertical-align: middle;" alt="" class="icon"> -->
             </div>
          </div>
-         <div class="marker" style="position:absolute;top:20vh;left:50vw" data-activate="#map-drawer">
+        <!--  <div class="marker" style="position:absolute;top:20vh;left:50vw" data-activate="#map-drawer">
             <img src="img/icons/marker.png" alt="" class="markericon">
-         </div>
+         </div> -->
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
     </div>
@@ -669,6 +671,7 @@
          <div class="nft-profile-bottom">
             <div class="nft-profile-map active">
                <div class="map map-placeholder"></div>
+             
             </div>
             <div class="nft-profile-description"></div>
          

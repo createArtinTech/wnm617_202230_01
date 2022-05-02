@@ -65,18 +65,46 @@ query({
     });
         console.log(result); */
 
-
-
-// Connection to database //
-
-const RecentPage = () => {
-
- 
 //let {result} = await query({
 //    type:'recent_nft_locations',
 //    params:[sessionStorage.userId]
 //    });
- //         console.log(result); 
+//         console.log(result); 
+
+
+// Connection to database //
+ // console.log(window.google)
+
+
+    //destructuring
+
+ /*let {result:nfts} = await query({
+        type:'nfts_by_user_id',
+        params:[sessionStorage.userId]
+    })
+
+         console.log(nfts)
+    $("#list-page .nft-list").html(makeNFTList(nfts));*/
+         
+
+const RecentPage = async() => {
+   
+    let {result} = await query({
+    type:'recent_nft_locations',
+    params:[sessionStorage.userId]
+    });
+    console.log(result);
+
+    let valid_nfts = result.reduce((r,o)=>{
+        o.icon = o.img;
+        if(o.lat && o.lng) r.push(o);
+        return r;
+    },[]);
+ /*see lesson 10 part 2 at 0.03.53* - add img and photo in database/
+ /*  makeMap("#recent-page .map");*/
+
+    let map_el = await makeMap("#recent-page .map");
+    makeMarkers(map_el,valid_nfts)
 
 }
 
@@ -104,18 +132,6 @@ const ListPage = async() => {
 }
 
 
-
-    //destructuring
-
- /*let {result:nfts} = await query({
-        type:'nfts_by_user_id',
-        params:[sessionStorage.userId]
-    })
-
-         console.log(nfts)
-    $("#list-page .nft-list").html(makeNFTList(nfts));*/
-         
-
 const ModalPage = async() => {
 
 }
@@ -129,9 +145,20 @@ const NFTProfilePage = async() => {
         })
 
     let [nft] = nfts;
-    $(".nft-profile-top").css({"background-image":`url(${nft.img})`});
-    $("#nft-profile-page h1").html(nft.name);
+    $(".nft-profile-top").css({"background-image":`url(${nft.img})`})
+    $("#nft-profile-page h1").html(nft.name)
     $(".nft-profile-description").html(makeNFTProfileDescription(nft));
+
+    let {result:locations} = await query({
+        type:'locations_by_nft_id',
+        params:[sessionStorage.nftId]
+
+    })
+    console.log(locations)
+
+    let map_el = await makeMap("#nft-profile-page .map");
+    makeMarkers(map_el,locations)
+
 }
 
 

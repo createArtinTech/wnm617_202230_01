@@ -81,27 +81,25 @@ case "nfts_by_user_id":
 case "locations_by_nft_id":
       return makeQuery($c, "SELECT * FROM `locationdata` WHERE `nft_id` = ?", $p);
 
-
+//JOINING DATA
 
 case "recent_nft_locations":
    return makeQuery($c, "SELECT *
       FROM `nftlistdata` a
-      JOIN `locationdata` l
-      ON a.id = l.nft_id
-      ", $p); 
-
-
-
-case "recent_nft_locations";
-   return makeQuery($c, "SELECT *
-      FROM `nftlistdata` n
       JOIN (
-         SELECT lg. *
+         SELECT lg.*
          FROM `locationdata` lg
-
-      ) l
-      ON n.id = l.nft_id
-      WHERE n.user_id = ?
+         WHERE lg.id = (
+            SELECT lt.id 
+            FROM `locationdata` lt
+            WHERE lt.nft_id = lg.nft_id 
+            ORDER BY lt.date_create DESC 
+            LIMIT 1
+            )
+        ) l 
+      ON a.id = l.nft_id 
+      WHERE a.user_id = ?
+      ORDER BY l.nft_id, l.date_create DESC 
       ", $p);
 
 
