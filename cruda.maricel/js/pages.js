@@ -149,6 +149,8 @@ const NFTProfilePage = async() => {
     $("#nft-profile-page h1").html(nft.name)
     $(".nft-profile-description").html(makeNFTProfileDescription(nft));
 
+    
+
     let {result:locations} = await query({
         type:'locations_by_nft_id',
         params:[sessionStorage.nftId]

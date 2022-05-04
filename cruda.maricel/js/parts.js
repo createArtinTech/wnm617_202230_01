@@ -32,23 +32,20 @@ const makeUserProfilePage = o => `
         <div><strong>Email</strong> ${o.email}</div>
         <a href="#landing-page">Log-out<a/>
     </div>
-
     `;
 
 
-const makeNFTProfilePage = o => `
+/*const makeNFTProfilePage = o => `
     <h2>${o.name}</h2>
     <div>${o.type}</div>
     <div>${o.category}</div>
 <a href="#nft-profile-page">Edit<a/>
 
-    `;
+    `;*/
 
 
 const makeNFTProfileDescription = o => `
     <h2>${o.name}</h2>
     <div>${o.type}</div>
     <div>${o.category}</div>
-<a href="#nft-profile-page">Edit<a/>
-
     `;
