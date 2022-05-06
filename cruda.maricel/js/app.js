@@ -25,6 +25,8 @@ $(() => {
          case "user-profile-page": UserProfilePage(); break;
          case "edit-user-profile-page": EditUserProfilePage(); break;
          case "nft-profile-description": NFTProfileDescription(); break;
+         case "nft-edit-page": NFTEditPage(); break;
+         case "nft-add-page": NFTAddPage(); break;
          
       }
    })
@@ -35,6 +37,15 @@ $(() => {
       e.preventDefault();
       checkLoginForm();
    })
+
+
+     // FORM SUBMISSION CLICKS
+   .on("click", ".js-submit-nft-add", function() {
+      submitNFTAdd();
+     /* sessionStorage.removeItem("userId");
+      checkUserId();*/
+   })
+
 
 
    // CLICKS

@@ -149,7 +149,7 @@ const NFTProfilePage = async() => {
     $("#nft-profile-page h1").html(nft.name)
     $(".nft-profile-description").html(makeNFTProfileDescription(nft));
 
-    
+
 
     let {result:locations} = await query({
         type:'locations_by_nft_id',
@@ -164,9 +164,25 @@ const NFTProfilePage = async() => {
 }
 
 
-const EditNFTProfilePage = async() => {
-
+const NFTEditPage = async() => {
+    let {result:nfts} = await query({
+            type:'nft_by_id',
+            params:[sessionStorage.nftId]
+        })
+    let [nft] = nfts;
+    $("#nft-edit-form") .html(makeNFTForm(nft))
 }
+
+
+const NFTAddPage = async() => {
+    let {result:nfts} = await query({
+            type:'nft_by_id',
+            params:[sessionStorage.nftId]
+        })
+    let [nft] = nfts;
+    $("#nft-add-form") .html(makeNFTForm(nft))
+}
+
 
 
 const AddingNFTPage = async() => {

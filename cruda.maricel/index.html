@@ -17,6 +17,7 @@
    <script src="js/functions.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
+   <script src="js/forms.js"></script>
    <script src="js/maps.js"></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
@@ -603,16 +604,17 @@
 
          </ul> -->
 
-         <div class="floater bottom right circle-button" data-activate="#list-add-nft-modal">&plus;</div>
+        <!--  <div class="floater bottom right circle-button" data-activate="#list-add-nft-modal">&plus;</div> -->
+         <a href="#nft-add-page" class="floater bottom right circle-button">&plus;</a>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
-
+</section>
 
 <!--==================================== -->
   <!--MODAL PLUS ICON  - add list NFT -->
 <!--==================================== -->
 
-     <div class="modal" id="list-add-nft-modal">
+   <!--   <div class="modal" id="list-add-nft-modal">
          <div class="modal-back" data-deactivate="#list-add-nft-modal"></div>
          <div class="modal-popup">
             <div class="modal-head">Add NFT</div>
@@ -633,18 +635,13 @@
                   <label for="#list-add-nft-description" class="form-label">description</label>
                   <input type="text" class="form-input" placeholder="Type a Description" data-role="none" id="list-add-nft-description">
                </div>
-               <!-- <p>Nostrum quos delectus blanditiis aperiam! Fuga excepturi, quibusdam, asperiores quis culpa vel ipsum, voluptatem quas officiis a rem nesciunt voluptatum accusamus deserunt consequuntur similique delectus dicta, quod odio. Laboriosam incidunt exercitationem ipsa necessitatibus enim neque. Quisquam totam rerum quia, nobis deleniti quae, delectus hic. Consectetur laudantium quis sunt aperiam hic quidem, velit dolores praesentium sapiente. Non, architecto, quas. Eaque, modi.</p>
-               <div class="display-flex">
-                  <div class="flex-stretch"></div>
-                  <div class="flex-none"><button class="form-button">click</button></div>
-               </div> -->
             </form>
             <div class="modal-foot" style="text-align:right" data-deactivate="#list-add-nft-modal">
                Submit
             </div>
          </div>
       </div>
-   </section>
+   </section> -->
 
 
    <!-- <section dat-role="page" id="nft-add-page">
@@ -697,7 +694,7 @@
             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
             <li class="flex-stretch"></li>
           
-            <li><a href="#edit-NFT-profile-page">Edit</a></li>
+            <li><a href="#nft-edit-page">Edit</a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -715,26 +712,7 @@
             <div class="nft-profile-description"></div>
          </div>
       </div>
-
-
-    <!--  <div data-role="main" class="mainprofile" id="cyptopunk4012">
-         <h1>Cryptopunk #4120</h1>
-         <div class="NFT-list-image"><img src="img/collections/cryptopunk/cryptopunk4012/cryptopunk4012-full.png" alt=""></div>
-        <div class="mainprofile-details">
-          <p class="labelnftprofile">Type</p>
-          <p class="currentlabelprofile">Cryptopunk</p>
-          <p class="labelnftprofile">Location</p>
-          <p class="currentlabelprofile">San Francisco Intl. Airport, CA</p>
-          <p class="labelnftprofile">Description</p>
-          <p class="currentlabelprofile">Cryptopunk collection - luggage brand collection.
-            Seen in SFO airport.</p>
-
-      <div> <a href="#categories-page">More categories</div>
-
-        </div>
-      </div> -->
-
-   
+  
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
@@ -962,6 +940,86 @@
 </section>
 
 
+
+<!--==================================== -->
+        <!-- NEW NFT ADD PAGE -->
+<!--==================================== -->
+
+
+
+<section data-role="page" id="nft-add-page">
+
+   <header data-role="header">
+         <h1>New NFT</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+             <li><a href="#" class="js-submit-nft-add">Save</a></li>
+         </ul>
+      </header>
+
+    <form id="nft-add-form" class="overscroll" data-ajax="false" style="padding:1em">
+             <!--   <div class="form-control">
+                  <label for="#nft-add-name" class="form-label">name</label>
+                  <input type="text" class="form-input" placeholder="Insert name of NFT" data-role="none" id="nft-add-name">
+               </div>
+               <div class="form-control">
+                  <label for="#nft-add-type" class="form-label">type</label>
+                  <input type="text" class="form-input" placeholder="Insert type of NFT" data-role="none" id="nft-add-type">
+               </div>
+               <div class="form-control">
+                  <label for="#nft-add-category" class="form-label">location</label>
+                  <input type="text" class="form-input" placeholder="Add location" data-role="none" id="nft-add-category">
+               </div>
+               <div class="form-control">
+                  <label for="#nft-add-description" class="form-label">description</label>
+                  <input type="text" class="form-input" placeholder="Type a Description" data-role="none" id="nft-add-description">
+               </div> -->
+            </form>
+         </div>
+
+</section>
+
+
+
+<!--==================================== -->
+        <!-- NFT EDIT  PAGE -->
+<!--==================================== -->
+
+
+
+<section data-role="page" id="nft-edit-page">
+
+   <header data-role="header">
+         <h1>Edit NFT</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+             <li><a href="#" class="js-submit-nft-edit">Save</a></li>
+         </ul>
+      </header>
+
+    <form id="nft-edit-form" class="overscroll" data-ajax="false" style="padding:1em">
+               <!-- <div class="form-control">
+                  <label for="#nft-edit-name" class="form-label">name</label>
+                  <input type="text" class="form-input" placeholder="Insert name of NFT" data-role="none" id="nft-edit-name">
+               </div>
+               <div class="form-control">
+                  <label for="#nft-edit-type" class="form-label">type</label>
+                  <input type="text" class="form-input" placeholder="Insert type of NFT" data-role="none" id="nft-edit-type">
+               </div>
+               <div class="form-control">
+                  <label for="#nft-edit-category" class="form-label">location</label>
+                  <input type="text" class="form-input" placeholder="Add location" data-role="none" id="nft-edit-category">
+               </div>
+               <div class="form-control">
+                  <label for="#nft-edit-description" class="form-label">description</label>
+                  <input type="text" class="form-input" placeholder="Type a Description" data-role="none" id="nft-edit-description">
+               </div> -->
+            </form>
+         </div>
+
+</section>
 
 
 
