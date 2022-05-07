@@ -23,6 +23,7 @@ $(() => {
          case "edit-NFT-profile-page": EditNFTProfilePage(); break;
          case "adding-nft-page": AddingNFTPage(); break;
          case "user-profile-page": UserProfilePage(); break;
+         case "user-edit-page": UserEditPage(); break;
          case "edit-user-profile-page": EditUserProfilePage(); break;
          case "nft-profile-description": NFTProfileDescription(); break;
          case "nft-edit-page": NFTEditPage(); break;

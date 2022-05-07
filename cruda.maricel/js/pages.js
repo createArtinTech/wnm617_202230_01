@@ -170,7 +170,7 @@ const NFTEditPage = async() => {
             params:[sessionStorage.nftId]
         })
     let [nft] = nfts;
-    $("#nft-edit-form") .html(makeNFTForm(nft))
+    $("#nft-edit-form") .html(makeNFTForm(nft,"nft-edit"))
 }
 
 
@@ -180,7 +180,7 @@ const NFTAddPage = async() => {
             params:[sessionStorage.nftId]
         })
     let [nft] = nfts;
-    $("#nft-add-form") .html(makeNFTForm(nft))
+    $("#nft-add-form") .html(makeNFTForm({},"nft-add"))
 }
 
 
@@ -207,7 +207,13 @@ const UserProfilePage = async() => {
     
 }
 
-const EditUserProfilePage = () => {
+const UserEditPage = async() => {
+     let {result:users} = await query({
+    type:'user_by_id',
+    params:[sessionStorage.userId]
+    })
+    let [user] = users;
 
+    $("#user-t-edit-form") .html(makeUserTForm(user,"user-edit"))
 }
 

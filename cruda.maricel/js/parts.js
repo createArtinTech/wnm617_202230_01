@@ -51,7 +51,7 @@ const makeNFTProfileDescription = o => `
     `;
 
 
-const FormControlInput = ({namespace,name,displayname,type,placeholder,value}) => {
+const FormControlInput = ({namespace,name,displayname,type,placeholder,value=""}) => {
    return `<div class="form-control">
       <label class="form-label" for="#${namespace}-${name}">${displayname}</label>
       <input data-role="none" class="form-input" type="${type}"  placeholder="${placeholder}" id="${namespace}-${name}" value="${value}">
@@ -59,47 +59,85 @@ const FormControlInput = ({namespace,name,displayname,type,placeholder,value}) =
 }
 
 
+const FormControlTextarea = ({namespace,name,displayname,placeholder,value=""}) => {
+   return `<div class="form-control">
+      <label class="form-label" for="#${namespace}-${name}">${displayname}</label>
+      <textarea data-role="none" class="form-input" placeholder="${placeholder}" id="${namespace}-${name}">${value}</textarea>
+   </div>`;
+}
 
-const makeNFTForm = o => {
-   let namespace = "nft-add";
+
+const makeNFTForm = (nft,namespace = "nft-add") => {
   return `
 ${FormControlInput({
     namespace,
-    name: "name",
+    name:"name",
     displayname:"Name",
     type:"text",
     placeholder:"Type a Name",
-    value:o.name,
+    value:nft.name,
 })}
 
 
 ${FormControlInput({
     namespace,
-    name: "type",
+    name:"type",
     displayname:"Type",
     type:"text",
     placeholder:"Type a Type",
-    value:o.type,
+    value:nft.type,
 })}
 
 
 ${FormControlInput({
     namespace,
-    name: "category",
+    name:"category",
     displayname:"Category",
     type:"text",
     placeholder:"Type a Category",
-    value:o.category,
+    value:nft.category,
+})}
+
+
+${FormControlTextarea({
+    namespace,
+    name:"description",
+    displayname:"Description",
+    placeholder:"Type a Description",
+    value:nft.description,
+})}
+`;
+}
+
+
+const makeUserForm = (user,namespace = "user-edit") => {
+  return `
+${FormControlInput({
+    namespace,
+    name:"name",
+    displayname:"Name",
+    type:"text",
+    placeholder:"Type a Name",
+    value:user.name,
+})}
+
+${FormControlInput({
+    namespace,
+    name:"username",
+    displayname:"Username",
+    type:"text",
+    placeholder:"Type a Username",
+    value:user.username,
 })}
 
 
 ${FormControlInput({
     namespace,
-    name: "description",
-    displayname:"Description",
+    name:"email",
+    displayname:"Email",
     type:"text",
-    placeholder:"Type a Description",
-    value:o.description,
+    placeholder:"Type an Email",
+    value:user.email,
 })}
 `;
 }
