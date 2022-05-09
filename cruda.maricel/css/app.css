@@ -292,7 +292,7 @@ div {
 }
 .modal.active {
    opacity: 1;
-   pointer-events: initial;
+   
 }
 .modal-back {
    position: absolute;
@@ -302,6 +302,12 @@ div {
    height: 100%;
    background-color: rgba(0,0,0,0.7);
 }
+
+
+.modal.active modal.back{
+pointer-events: initial;
+}
+
 .modal-back.transparent {
    background-color: transparent;
 }
@@ -324,7 +330,13 @@ div {
 }
 .modal.active .modal-popup {
    transform: translate(-50%, -50%);
+   pointer-events: initial;
 }
+
+.modal.active .modal-back{
+pointer-events: initial;
+}
+
 .modal-head,
 .modal-foot {
    background-color: var(--color-neutral-lighter);
@@ -363,6 +375,7 @@ div {
 
 .modal.active .modal-drawer {
    transform: translate(0);
+   pointer-events: initial;
 }
 
 
@@ -384,14 +397,12 @@ div {
    width: 2rem;
    height: 2rem;
    text-align: center;
-   background-color: #18D7A5;
+   /*background-color: #18D7A5;*/
+   background-color: white;
    box-shadow: 0.1em 0.2em 0.4em rgba(0,0,0,0.2);
 
 }
-
-
-
-
+modal-drawer
 
 /* landing page */
 
@@ -733,7 +744,7 @@ hr {
 .usericonprofile {
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: none;
   margin-top: .5rem;
   width: 45%;
 
@@ -760,16 +771,31 @@ hr {
 }
 .nav-icon .icon {
     vertical-align: middle;
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 22px;
     background-color: var(--color-footer-nav);
 
 }
-.nav-icon-label {
+
+.nav-icon .icon-camera {
+    vertical-align: middle;
+    width: 24px;
+    height: 22px;
+    background-color: var(--color-footer-nav);
+
+}
+
+
+
+.newpass-label {
+   margin-top: 3rem;
+}
+
+/*.nav-icon-label {
     line-height: 1rem;
     display: block;
     font-size: 0.8em;
-}
+}*/
 
 /* Layout Classes */
 
@@ -788,3 +814,12 @@ hr {
 
 .flex-column { flex-direction:column; }
 .overscroll { overflow:auto; }
+
+.fill-parent {
+   height:  100%;
+   width: 100%;
+}
+
+.noclick-children * { pointer-events:none; }
+
+}

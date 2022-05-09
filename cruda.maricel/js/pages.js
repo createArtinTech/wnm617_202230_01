@@ -85,26 +85,55 @@ query({
 
          console.log(nfts)
     $("#list-page .nft-list").html(makeNFTList(nfts));*/
-         
+
+/*see lesson 10 part 2 at 0.03.53* - add img and photo in database/
+ /*  makeMap("#recent-page .map");*/    
 
 const RecentPage = async() => {
    
-    let {result} = await query({
+    let {result,error} = await query({
     type:'recent_nft_locations',
     params:[sessionStorage.userId]
     });
     console.log(result);
+
+    if(error) throw(error);
 
     let valid_nfts = result.reduce((r,o)=>{
         o.icon = o.img;
         if(o.lat && o.lng) r.push(o);
         return r;
     },[]);
- /*see lesson 10 part 2 at 0.03.53* - add img and photo in database/
- /*  makeMap("#recent-page .map");*/
+ 
 
     let map_el = await makeMap("#recent-page .map");
     makeMarkers(map_el,valid_nfts)
+
+    map_el.data("markers").forEach((m,i)=>{
+        console.log(m)
+        m.addListener("click",function(e){
+            let nft = valid_nfts[i];
+
+            console.log(nft)
+
+            //just to navigate
+            //sessionStorage.nftId = nft.nft_id;
+            //$.mobile.navigate("#nft-profile-page");
+
+
+            //open Google INfoWindow
+            //map_el.data("infoWindow")
+            //.open(map_el.data("map"),m);
+            //map_el.data("infoWindow")
+            //.setContent(makeNFTPopupBody(nft));
+
+
+            $("#map-drawer")
+                .addClass("active")
+                .find(".modal-body")
+                .html(makeNFTPopupBody({...nft,id:nft.nft_id}))
+        })
+    })
 
 }
 
@@ -214,6 +243,7 @@ const UserEditPage = async() => {
     })
     let [user] = users;
 
-    $("#user-t-edit-form") .html(makeUserTForm(user,"user-edit"))
+    /*$("#user-nft-edit-form") .html(makeUserTForm(user,"user-edit"))*/
+    $("#user-edit-page") .html(makeUserForm(user,"user-edit"))
 }
 

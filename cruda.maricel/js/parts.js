@@ -3,8 +3,6 @@
  `); */
 
 
-
-
 const makeNFTList = templater (o=>`
 <li class="nft-list-item">
     <a href="#nft-profile-page" class="js-nft-jump" data-id="${o.id}">
@@ -20,6 +18,7 @@ const makeNFTList = templater (o=>`
 `);
 
 
+
 const makeUserProfilePage = o => `
     <img src="${o.img}">
     
@@ -30,7 +29,8 @@ const makeUserProfilePage = o => `
     <div>
         <div><strong>Username</strong> @${o.username}</div>
         <div><strong>Email</strong> ${o.email}</div>
-        <a href="#landing-page">Log-out<a/>
+        <div><a href="#user-settings-page">Settings</a></div>
+        <div><a href="#landing-page">Log-out<a/></div>
     </div>
     `;
 
@@ -48,6 +48,18 @@ const makeNFTProfileDescription = o => `
     <h2>${o.name}</h2>
     <div>${o.type}</div>
     <div>${o.category}</div>
+    `;
+
+
+const makeNFTPopupBody = o => `
+   <div class="display-flex js-nft-jump noclick-children" data-id="${o.id}">
+     <div class="nft-list-image"><img src="${o.img}" alt=""></div>
+     <div>
+        <h2>${o.name}</h2>
+        <div>${o.type}</div>
+        <div>${o.category}</div>
+     </div>
+ </div>
     `;
 
 

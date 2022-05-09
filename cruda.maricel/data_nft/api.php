@@ -81,6 +81,12 @@ case "nfts_by_user_id":
 case "locations_by_nft_id":
       return makeQuery($c, "SELECT * FROM `locationdata` WHERE `nft_id` = ?", $p);
 
+
+
+
+
+
+
 //JOINING DATA
 
 case "recent_nft_locations":
@@ -102,6 +108,17 @@ case "recent_nft_locations":
       ORDER BY l.nft_id, l.date_create DESC 
       ", $p);
 
+
+
+case "insert_nft":
+  makeQuery($c,"INSERT INTO 
+      `locationdata`
+      (`user_id`,`name`,`type`,`category`,`description`,`img`,`date_create`)
+      VALUES 
+      (?,?,?,?,? `https://via.placeholder.com/400/?text=NFT`, NOW())
+      ", $p, $false);
+
+   return ["id"=>$c->LastInsertId];
 
 
 case "check_signin":
