@@ -123,7 +123,7 @@ div {
 .ui-mobile .form-label {
    font-size: 0.8em;
    color: var(--color-neutral-medium);
-   margin: 0.5rem 0;
+   margin: 0.5rem 0.5rem;
 }
 .form-input {
    display: inline-block;
@@ -145,7 +145,7 @@ div {
    /*background-color: var(--color-neutral-light);*/
    font: inherit;
    padding: 0.5em 1em;
-   margin: 0;
+   margin-top: 3rem;
    outline: 0;
    text-align: center;
    text-decoration: none;
@@ -194,8 +194,6 @@ div {
 #recent-search {
    box-shadow: 0.1em 0.2em 0.4em rgba(0,0,0,0.3);
 }
-
-
 
 
 .recent-search {
@@ -417,9 +415,8 @@ div .landingcover  {
 
 .titleheading {
 font-size: 2rem;
-margin-left: 2rem;
+margin-left: 20rem;
 margin-top: 10rem;
-margin: 1rem:
 padding:2rem;
 
 }
@@ -544,10 +541,11 @@ padding:2rem;
 .mainprofile h1{
  /*margin-left: 50px;
  margin-top: 30px;*/
- font-size: 16px;
- font-weight: bold;
- color: white;
- margin-left: 20px;
+font-size: 16px;
+font-weight: bold;
+color: white;
+margin-left: 20px;
+margin-bottom: 2rem;
 
 }
 

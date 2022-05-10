@@ -40,6 +40,14 @@ $(() => {
    })
 
 
+
+     .on("submit", "#signup-form", function(e) {
+      e.preventDefault();
+      submitUserSignup();
+   })
+
+
+
      // FORM SUBMISSION CLICKS
    .on("click", ".js-submit-nft-add", function() {
       submitNFTAdd();

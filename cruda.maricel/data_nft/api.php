@@ -110,15 +110,43 @@ case "recent_nft_locations":
 
 
 
+case "insert_user":
+   $r = makeQuery($c,"SELECT id FROM `userdata` WHERE `username` = ? OR `email` = ?",$p);
+   if(count($r['result'])) return ["error"=>"Username or Email already exists"];
+
+  makeQuery($c,"INSERT INTO 
+      `userdata`
+      (`username`,`email`,`password`,`img`,`date_create`)
+      VALUES 
+      (?, ?, md5(?), 'https://via.placeholder.com/400/?text=USER', NOW())
+      ", $p, $false);
+   return ["id"=>$c->LastInsertId()];
+
+
+
 case "insert_nft":
   makeQuery($c,"INSERT INTO 
-      `locationdata`
+      `nftlistdata`
       (`user_id`,`name`,`type`,`category`,`description`,`img`,`date_create`)
       VALUES 
-      (?,?,?,?,? `https://via.placeholder.com/400/?text=NFT`, NOW())
+      (?, ?, ?, ?, ?, 'https://via.placeholder.com/400/?text=NFT', NOW())
       ", $p, $false);
+   return ["id"=>$c->LastInsertId()];
 
-   return ["id"=>$c->LastInsertId];
+
+
+
+case "insert_location":
+  makeQuery($c,"INSERT INTO 
+      `locationdata`
+      (`nft_id`,`lat`,`lng`,`description`,`photo`, `icon`,`date_create`)
+      VALUES 
+      (?, ?, ?, ?, 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', NOW())
+      ", $p, $false);
+   return ["id"=>$c->LastInsertId()];
+
+
+
 
 
 case "check_signin":
@@ -126,8 +154,6 @@ case "check_signin":
 
          default:
             return ["error"=> "No Matched Type"];
-
-
    }
 } 
 

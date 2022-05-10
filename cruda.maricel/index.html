@@ -138,25 +138,26 @@
 
    <section data-role="page" id="signup-page">
       <div data-role="main" class="display-flex flex-column">
-
         <header data-role="header">
-           <ul>
-              
+            <ul>
               <li class="flex-stretch"></li>
               <li><a href="#landing-page"><img class="iconclose" src="img/icons/close.png"></a></li>
-             <!-- <li><a href="#list-page">Save</a></li> -->
-           </ul>
+            </ul>
         </header>
              <div data-role="main" class="mainprofile" id="header">
-            <h1 class="titlehead">SIGN UP</h1>
-          <div class="flex-stretch"></div>
-
-
+             <h1 class="titlehead">SIGN UP</h1>
+             <div class="flex-stretch"></div>
          <form id="signup-form" class="form" data-ajax="false">
             <div class="form-control">
                <label for="signup-username" class="form-label">Username</label>
                <input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
             </div>
+
+            <div class="form-control">
+               <label for="signup-email" class="form-label">Email</label>
+               <input type="text" id="signup-email" data-role="none" class="form-input" placeholder="Type your Email">
+            </div>
+
             <div class="form-control">
                <label for="signup-password" class="form-label">Password</label>
                <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
@@ -517,10 +518,20 @@
          </ul>
       </header>
 
-    <form id="nft-add-form" class="overscroll" data-ajax="false" style="padding:1em"></form>
+    <form id="nft-choose-form" class="overscroll" data-ajax="false" style="padding:1em"></form>
          </div>
 
+
+
+         <div data-role="main">
+        <ul class="nft-list">
+           <li class="flex-stretch"></li>
+        </ul>
+         
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
 </section>
+
 
 
 
@@ -540,9 +551,16 @@
       </header>
 
     <form id="nft-add-form" class="overscroll" data-ajax="false" style="padding:1em"></form>
-         </div>
-
+          <div data-role="main">
+        <ul class="nft-list">
+           <li class="flex-stretch"></li>
+        </ul>
+         
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
 </section>
+
+
 
 
  <!--==================================== -->
@@ -772,7 +790,7 @@
 
 <section data-role="page" id="adding-nft-page">
    <header data-role="header">
-      <h1>Add NFT</h1>
+      <h1>Add Photo</h1>
       <ul>
          <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
          <li class="flex-stretch"></li>
@@ -908,7 +926,7 @@
        <!-- EDIT USER PROFILE page -->
    <!--==================================== -->
 
-   <section data-role="page" id="user-edit-page">
+  <!--  <section data-role="page" id="user-edit-page">
          <header data-role="header">
             <h1>Edit User</h1>
             <ul>
@@ -918,18 +936,18 @@
             </ul>
          </header>
         
-      <div data-role="main" class="mainprofile" id="userphoto">
+      <div data-role="main" class="mainprofile" id="userphoto"> -->
          <!-- <div class="users-image"><img src="img/icons/john-mint-profile.png" alt=""></div> -->
 
 
-          <div date-role="main">
+        <!--   <div date-role="main">
             <a href="#" class="js-logout">Logout</a>
         </div>
           
     </div>
    </div>
    <footer data-role="footer" data-template="#footer-template"></footer>
-   </section>
+   </section> -->
 
    <!--==================================== -->
        <!-- USER SETTINGS page -->
@@ -951,11 +969,15 @@
                <li><a href="#user-edit-page" class="js-logout">Edit User</a></li>
                <li><a href="#user-password-page" class="js-logout">Edit Password</a></li>
                <li><a href="#" class="js-logout">Logout</a></li>
+               
             </ul>
+     <div data-role="main">
+        <ul class="nft-list"></ul>
+
          </div>
-       </div>
-   <footer data-role="footer" data-template="#footer-template"></footer>
-   </section>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+</section>
 
 
 
@@ -971,14 +993,12 @@
          </header>
 
       <div data-role="main">
-
-         <div>
-           <form id="user-edit-form" class="overscroll" data-ajax="false" style="padding:1em">  
-           </form>
-           </div>
+        <form id="user-edit-form" class="overscroll" data-ajax="false" style="padding:1em"></form>
+          
       </div>
-   </section>
-
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+</section>
 
 
 <section data-role="page" id="user-password-page">
@@ -987,6 +1007,7 @@
             <ul>
                <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
                <li class="flex-stretch"></li>
+               <li><a href="#user-profile-page"><img class="iconclose" src="img/icons/close.png"></a></li>
             </ul>
          </header>
       <div data-role="main">
