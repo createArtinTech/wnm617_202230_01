@@ -45,6 +45,21 @@ function makeQuery($c,$ps,$p,$makeResults=true) {
    }
 }
 
+
+function makeUpload($file,$folder) {
+   $filename = microtime(true) . "_" . $_FILES[$file]['name'];
+   if(@move_uploaded_file(
+      $_FILES[$file]['tmp_name'],
+      $folder.$filename
+   )) return ["result"=>$filename];
+      else return [
+         "error"=>"File Upload Failed",
+         "filename"=>$filename
+      ];
+
+
+}
+
 function makeStatement($data) {
    $c = makeConn();
    $t = $data->type;
@@ -65,7 +80,7 @@ switch($t) {
 
 
    case "user_by_id":
-      return makeQuery($c, "SELECT `name`,`address`,`email`,`user_name` FROM `userdata` WHERE `id` = ?", $p);
+      return makeQuery($c, "SELECT `name`,`address`,`email`,`user_name`,`img` FROM `userdata` WHERE `id` = ?", $p);
       /*return makeQuery($c, "SELECT `id`,`name`,`email`,`address`,`username` FROM `userdata` WHERE `id` = ?", $p);*/
 
    case "nft_by_id":
@@ -92,7 +107,7 @@ case "locations_by_nft_id":
 case "recent_nft_locations":
    return makeQuery($c, "SELECT *
       FROM `nftlistdata` a
-      JOIN (
+      RIGHT JOIN (
          SELECT lg.*
          FROM `locationdata` lg
          WHERE lg.id = (
@@ -163,6 +178,17 @@ case "check_signin":
 "SELECT * FROM nftlistdata WHERE user_id = ?",
 "SELECT * FROM locationdata WHERE user_id = ?",
 */
+
+
+if(!empty($_FILES)) {
+   $r = makeUpload("image","../uploads/");
+   die(json_encode($r));
+}
+
+
+
+
+
 
 $data = json_decode(file_get_contents("php://input"));
 
