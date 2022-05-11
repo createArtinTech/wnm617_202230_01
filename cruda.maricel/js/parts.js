@@ -19,20 +19,23 @@ const makeNFTList = templater (o=>`
 
 
 
-const makeUserProfilePage = o => `
+const makeUserProfilePage = o => {
+    console.log(o)
+    return `
     <img src="${o.img}">
     
     <div>
-    <h2>${o.name}</h2>
-    <h2>${o.address}</h2>
+        <h2>${o.name}</h2>
+        <h2>${o.address}</h2>
     </div>
     <div>
-        <div><strong>Username</strong> @${o.username}</div>
+        <div><strong>Username</strong> @${o.user_name}</div>
         <div><strong>Email</strong> ${o.email}</div>
         <div><a href="#user-settings-page">Settings</a></div>
         <div><a href="#landing-page">Log-out<a/></div>
     </div>
     `;
+}
 
 
 /*const makeNFTProfilePage = o => `

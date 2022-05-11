@@ -629,7 +629,7 @@ flex-direction: column;
 }
 
 .nft-profile-bottom>div{
-   opacity: 100%;
+   opacity: 1%;
    pointer-events: none;
    transition: all 0.3s;
    position: absolute;

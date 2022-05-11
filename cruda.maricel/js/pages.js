@@ -104,6 +104,8 @@ const RecentPage = async() => {
         if(o.lat && o.lng) r.push(o);
         return r;
     },[]);
+
+    console.log([...valid_nfts])
  
 
     let map_el = await makeMap("#recent-page .map");
