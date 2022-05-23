@@ -108,10 +108,12 @@ p{
 
 div h2 {
  color: white;
+ font-size: 1.5rem;
 }
 
 div {
  color: white;
+ padding
 }
 
 
@@ -342,9 +344,10 @@ pointer-events: initial;
    padding: 0 1em;
 }
 .modal-body {
-   background-color: white;
+   background-color: #171612;
    flex: 1 1 100%;
-   padding: 1em;
+   padding: 3rem;
+   margin-top: 3rem;
 }
 
 .modal-drawer {
@@ -477,6 +480,31 @@ padding:2rem;
   vertical-align: middle;
 }
 
+
+.iconnext{
+  width: 10px;
+  height: 20px;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.iconedit{
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  vertical-align: middle;
+  }
+
+
+
+.iconsave{
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+
 /* nft List */
 .nft-list {
    list-style-type: none;
@@ -504,6 +532,7 @@ padding:2rem;
 .nft-list-image img {
    width: 8em;
    vertical-align: text-bottom;
+   margin-right: 2rem;
    
 }
 .nft-list-body {
@@ -612,6 +641,14 @@ margin-bottom: 2rem;
 .nft-profile-nav div {
 text-align: center;
 flex: 1 1 auto;
+background-color: #2B2D30;
+
+}
+
+.nft-profile-nav div:hover {
+  background-color: var(--color-font);
+   text-decoration: none;
+
 }
 
 #nft-profile-page {
@@ -643,6 +680,8 @@ flex-direction: column;
 .nft-profile-bottom div.active {
    opacity: 1;
    pointer-events: initial;
+   padding:  2rem;
+   background-color: #1C1B18;
 }
 
 
@@ -821,4 +860,20 @@ hr {
 
 .noclick-children * { pointer-events:none; }
 
+}
+
+
+/* Image Picker */
+.imagepicker.replace {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-position: center;
+   background-size: contain;
+   background-repeat:  no-repeat;
+}
+.imagepicker.replace input {
+   display: none;
 }

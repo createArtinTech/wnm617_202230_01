@@ -105,7 +105,7 @@ const RecentPage = async() => {
         return r;
     },[]);
 
-    console.log([...valid_nfts])
+   /* console.log([...valid_nfts])*/
  
 
     let map_el = await makeMap("#recent-page .map");
@@ -139,18 +139,6 @@ const RecentPage = async() => {
 
 }
 
-const LandingPage = async() => {
-
-}
-const SigninPage = async() => {
-
-}
-const SignupPage = async() => {
-
-}
-const CategoriesPage = async() => {
-
-}
 const ListPage = async() => {
      //destructuring
     let {result:nfts} = await query({
@@ -158,14 +146,56 @@ const ListPage = async() => {
     params:[sessionStorage.userId]
     })
           console.log(nfts)
-    $("#list-page .nft-list").html(makeNFTList(nfts));
-    
+   
+  /*$("#list-page .nft-list").html(makeNFTList(nfts));*/
+    makeNFTListSet(nfts);
 }
 
 
-const ModalPage = async() => {
+/* USER PROFILE PAGE */
 
+const UserProfilePage = async() => {
+
+    let {result:users} = await query({
+        type:'user_by_id',
+        params:[sessionStorage.userId]
+    })
+
+    let [user] = users;
+
+    $("#user-profile-page [data-role='main']").html(makeUserProfilePage(user));
+
+    console.log(user)
 }
+
+
+const UserEditPage = async() => {
+    let {result:users} = await query({
+        type:'user_by_id',
+        params:[sessionStorage.userId]
+    })
+
+    let [user] = users;
+
+    /*$("#user-nft-edit-form").html(makeUserForm(user,"user-edit"))*/
+    $("#user-edit-form").html(makeUserForm(user,"user-edit"))
+}
+
+const UserEditPhotoPage = async () => {
+   let {result:users} = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   })
+   let [user] = users;
+
+   $("#user-edit-photo-page .imagepicker").css({
+      "background-image":`url(${user.img})`
+   })
+}
+
+
+
+/* NFT PROFILE PAGE */
 
 
 const NFTProfilePage = async() => {
@@ -179,8 +209,6 @@ const NFTProfilePage = async() => {
     $(".nft-profile-top").css({"background-image":`url(${nft.img})`})
     $("#nft-profile-page h1").html(nft.name)
     $(".nft-profile-description").html(makeNFTProfileDescription(nft));
-
-
 
     let {result:locations} = await query({
         type:'locations_by_nft_id',
@@ -201,9 +229,8 @@ const NFTEditPage = async() => {
             params:[sessionStorage.nftId]
         })
     let [nft] = nfts;
-    $("#nft-edit-form") .html(makeNFTForm(nft,"nft-edit"))
+    $("#nft-edit-form").html(makeNFTForm(nft,"nft-edit"))
 }
-
 
 const NFTAddPage = async() => {
     let {result:nfts} = await query({
@@ -211,11 +238,24 @@ const NFTAddPage = async() => {
             params:[sessionStorage.nftId]
         })
     let [nft] = nfts;
-    $("#nft-add-form") .html(makeNFTForm({},"nft-add"))
+    $("#nft-add-form").html(makeNFTForm({},"nft-add"))
+}
+
+const NFTEditPhotoPage = async () => {
+   let {result:nfts} = await query({
+      type:'nft_by_id',
+      params:[sessionStorage.nftId]
+   })
+   let [nft] = nfts;
+
+   $("#nft-edit-photo-page .imagepicker").css({
+      "background-image":`url(${nft.img})`
+   })
 }
 
 
 
+/*
 const AddingNFTPage = async() => {
       query({
         type:'nfts_all',
@@ -224,28 +264,43 @@ const AddingNFTPage = async() => {
         console.log(d)
     })
 }
+*/
 
-const UserProfilePage = async() => {
-     let {result:users} = await query({
-    type:'user_by_id',
-    params:[sessionStorage.userId]
-    })
-    let [user] = users;
 
-    console.log(user)
+const ChooseNFTPage = async () => {
+   let {result:nfts} = await query({
+      type:'nfts_by_user_id',
+      params:[sessionStorage.userId]
+   });
 
-    $("#user-profile-page [data-role='main']").html(makeUserProfilePage(user));
-    
+   $("#location-nft").val(nfts[0]?.id);
+   $("#location-start").val(-3);
+
+   $("#choose-nft-input").html(FormSelect(
+      nfts.map(o=>({value:o.id,text:o.name})),
+      'choose-nft',
+      'select',
+      'Choose nft',
+      ''
+   ));
 }
 
-const UserEditPage = async() => {
-     let {result:users} = await query({
-    type:'user_by_id',
-    params:[sessionStorage.userId]
-    })
-    let [user] = users;
 
-    /*$("#user-nft-edit-form") .html(makeUserTForm(user,"user-edit"))*/
-    $("#user-edit-page") .html(makeUserForm(user,"user-edit"))
+/* Choose Location Page */
+
+const ChooseLocationPage = async () => {
+   let map_el = await makeMap("#choose-location-page .map");
+
+   map_el.data("map").addListener("click",function(e){
+      console.log(e)
+      $("#location-lat").val(e.latLng.lat())
+      $("#location-lng").val(e.latLng.lng())
+      makeMarkers(map_el,[e.latLng])
+   })
 }
 
+/*
+const SigninPage = async() => {
+}
+const SignupPage = async() => {
+}*/

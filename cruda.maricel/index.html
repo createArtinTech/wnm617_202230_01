@@ -89,35 +89,32 @@
         <!-- SIGN-IN page -->
   <!--==================================== -->
    <section data-role="page" id="signin-page">
-     <div data-role="main" class="display-flex flex-column">
+      <div data-role="main" class="display-flex flex-column">
 
-       <header data-role="header">
-          <ul>
-             
-             <li class="flex-stretch"></li>
-             <li><a href="#landing-page"><img class="iconclose" src="img/icons/close.png"></a></li>
+      <header data-role="header">
+         <ul>
+            <li class="flex-stretch"></li>
+            <li><a href="#landing-page"><img class="iconclose" src="img/icons/close.png"></a></li>
             <!-- <li><a href="#list-page">Save</a></li> -->
-          </ul>
-       </header>
-
-           <div data-role="main" class="mainprofile" id="header">
-          <h1 class="titlehead">SIGN IN</h1>
-        <div class="flex-stretch"></div>
-        <!-- <div style="text-align:center;margin-bottom:10vmin">
+         </ul>
+      </header>
+      <div data-role="main" class="mainprofile" id="header">
+         <h1 class="titlehead">SIGN IN</h1>
+         <div class="flex-stretch"></div>
+         <!-- <div style="text-align:center;margin-bottom:10vmin">
          <img src="img/icons/landing.png" alt="" style="width:50vmin;height:50vmin">
-
-         </div>-->
+   </div>-->
 
          <form id="signin-form" class="form" data-ajax="false">
             <div class="form-control">
                <label for="signin-username" class="form-label">Username</label>
                <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Type your Username">
             </div>
+
             <div class="form-control">
                <label for="signin-password" class="form-label">Password</label>
                <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Type your Password">
             </div>
-
             <!-- <input type="submit" data-role="none"> -->
             <!-- submit -->
 
@@ -132,6 +129,7 @@
       </div>
    </section>
 
+
    <!--==================================== -->
          <!-- SIGN-UP page -->
    <!--==================================== -->
@@ -144,9 +142,11 @@
               <li><a href="#landing-page"><img class="iconclose" src="img/icons/close.png"></a></li>
             </ul>
         </header>
-             <div data-role="main" class="mainprofile" id="header">
-             <h1 class="titlehead">SIGN UP</h1>
-             <div class="flex-stretch"></div>
+
+      <div data-role="main" class="mainprofile" id="header">
+         <h1 class="titlehead">SIGN UP</h1>
+         <div class="flex-stretch"></div>
+             
          <form id="signup-form" class="form" data-ajax="false">
             <div class="form-control">
                <label for="signup-username" class="form-label">Username</label>
@@ -155,26 +155,24 @@
 
             <div class="form-control">
                <label for="signup-email" class="form-label">Email</label>
-               <input type="text" id="signup-email" data-role="none" class="form-input" placeholder="Type your Email">
+               <input type="email" id="signup-email" data-role="none" class="form-input" placeholder="Type your Email">
             </div>
 
             <div class="form-control">
                <label for="signup-password" class="form-label">Password</label>
                <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
             </div>
+
             <div class="form-control">
                <label for="signup-password2" class="form-label">Confirm Password</label>
                <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type your Password again">
             </div>
 
-
             <!-- <input type="submit" data-role="none"> -->
-
            <!-- <div class="form-control"> -->
                <!-- <button type="button" class="form-button">Submit</button> -->
               <!-- <a href="#categories-page" class="form-button">Sign Up</a>
             </div> -->
-
 
             <div class="form-control">
                <button type="submit" class="form-button" data-role="none">Sign Up</button>
@@ -184,8 +182,10 @@
                <p>Already have an account? <a href="#signin-page">Sign In!</a></p>
             </div>
          </form>
+
          <div class="flex-stretch"></div>
       </div>
+
    </section>
 
    <!--==================================== -->
@@ -199,7 +199,7 @@
         <ul>
           <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
           <li class="flex-stretch">
-            <li><a href="#nft-edit-page">Edit</a></li>
+          <li><a href="#nft-edit-page">Edit</a></li>
          </li>
         </ul>
      </header>
@@ -504,10 +504,64 @@
    </section> -->
 
 
-
+<!--==================================== -->
+  <!--Choose NFT and Choose Location -->
+<!--==================================== -->
 
 
 <section data-role="page" id="choose-nft-page">
+      <header data-role="header">
+         <h1>Choose NFT</h1>
+         <ul>
+              <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-description-page"><img class="iconnext" src="img/icons/next.png"></a></li>
+         </ul>
+      </header>
+      <div data-role="main" style="padding:1em">
+         <input type="hidden" id="location-nft">
+         <input type="hidden" id="location-start" value="-3">
+         <div class="form-control">
+            <a href="#nft-add-page" class="form-button">Add New NFT</a>
+         </div>
+         <p>or select one below</p>
+         <div class="form-control" id="choose-nft-input"></div>
+      </div>
+   </section>
+
+   <section data-role="page" id="choose-location-page">
+      <header data-role="header">
+         <h1>Choose Location</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-description-page"><img class="iconnext" src="img/icons/next.png"></a></li>
+            <!-- <li><a href="#choose-description-page">Next</a></li> -->
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="location-lat">
+         <input type="hidden" id="location-lng">
+         <div class="map"></div>
+      </div>
+   </section>
+
+   <section data-role="page" id="choose-description-page">
+      <header data-role="header">
+         <h1>Describe The NFT</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-location-add">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" style="padding:1em">
+         <textarea id="location-description" class="form-input" data-role="none"></textarea>
+      </div>
+   </section>
+
+
+<!-- <section data-role="page" id="choose-nft-page">
 
    <header data-role="header">
          <h1>Choose NFT</h1>
@@ -544,8 +598,6 @@
       </ul>
    </header>
 
-
-   <!-- <form id="nft-add-form" class="overscroll" data-ajax="false" style="padding:1em"></form> -->
    <div data-role="main">
       <ul class="nft-list">
          <li class="flex-stretch"></li>
@@ -554,7 +606,7 @@
    </div>
    <footer data-role="footer" data-template="#footer-template"></footer>
 </section>
-
+ -->
 
 
 
@@ -569,12 +621,18 @@
          <ul>
             <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
             <li class="flex-stretch"></li>
-          
             <li><a href="#nft-edit-page">Edit</a></li>
          </ul>
       </header>
       <div data-role="main">
          <div class="nft-profile-top">
+
+
+            <a href="#" class="floater bottom right js-nft-delete noclick-children"><img src="img/icons/edit-down.png" class="icon"></a>
+            <a href="#nft-edit-photo-page" class="floater bottom left"><img src="img/icons/edit-down.png" class="icon"></a>
+
+
+
          </div>
          <div class="nft-profile-nav">
             <div class="active">Map</div>
@@ -660,7 +718,7 @@
  <!-- ================================================  -->
 
 <!-- EDIT Profile  -->
-
+<!--
 <section data-role="page" id="edit-NFT-profile-page">
    <header data-role="header">
       <h1>Edit NFT Profile</h1>
@@ -694,7 +752,7 @@
    </div>
    <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
-
+-->
 
 
 
@@ -782,8 +840,8 @@
         <!-- ADDING NFT PAGE -->
 <!--==================================== -->
 
-
-<section data-role="page" id="adding-nft-page">
+<!--
+<section data-role="page" id="nft-add-page">
    <header data-role="header">
       <h1>Add Photo</h1>
       <ul>
@@ -811,7 +869,7 @@
    </div>
    <footer data-role="footer" data-template="#footer-template"></footer>
 </section>
-
+-->
 
 
 <!--==================================== -->
@@ -830,7 +888,16 @@
              <li><a href="#" class="js-submit-nft-add">Save</a></li>
          </ul>
       </header>
-<div>
+
+   <div data-role="main">      
+<!--          <div style="padding:1em">
+            <input type="hidden" id="nft-add-image-url">
+            <label class="imagepicker imagepicker-replace thumbnail" id="nft-add-image-picker">
+               <input type='file' data-role="none">
+            </label>
+         </div>
+ -->
+   <div>
     <form id="nft-add-form" class="overscroll" data-ajax="false" style="padding:1em">
                 <div class="form-control">
                   <label for="#nft-add-name" class="form-label">name</label>
@@ -850,6 +917,7 @@
                </div> 
             </form>
          </div>
+</div>         
          <!-- </div>
           </div>
        <footer data-role="footer" data-template="#footer-template"></footer> -->
@@ -865,22 +933,39 @@
 
 <section data-role="page" id="nft-edit-page">
    <header data-role="header">
-         <h1>Edit NFT</h1>
-         <ul>
-            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
-            <li class="flex-stretch"></li>
-             <li><a href="#" class="js-submit-nft-edit">Save</a></li>
-         </ul>
-      </header>
+      <h1>Edit NFT</h1>
+      <ul>
+         <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+         <li class="flex-stretch"></li>
+         <li><a href="#" class="js-submit-nft-edit">Save</a></li>
+      </ul>
+   </header>
    <div data-role="main">
-     <form id="nft-edit-form" class="overscroll" data-ajax="false" style="padding:1em">  
-     </form>
+      <form id="nft-edit-form" class="overscroll" data-ajax="false" style="padding:1em">
+      </form>
+   </div>
+<!--   </div> 220522 --> 
+   <footer data-role="footer" data-template="#footer-template"></footer>
+</section>
 
-  </div>
-          </div>
-       <footer data-role="footer" data-template="#footer-template"></footer>
-   </section>
 
+<section data-role="page" id="nft-edit-photo-page">
+   <header data-role="header">
+      <h1>Upload Photo</h1>
+      <ul>
+         <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+         <li class="flex-stretch"></li>
+         <li><a href="#" class="js-submit-nft-upload">Save</a></li>
+      </ul>
+   </header>
+   <div data-role="main">
+      <input type="hidden" id="nft-edit-photo-image">
+      <label class="imagepicker replace">
+         <input type='file' id="nft-edit-photo-input" data-role="none">
+      </label>
+   </div>
+   <footer data-role="footer" data-template="#footer-template"></footer>
+</section>
 
 
 
@@ -909,12 +994,12 @@
       <div data-role="main" class="mainprofile" id="userphoto">
          <div class="users-image"></div>
 
-         <!-- <div data-role="main" class="mainprofile" id="userphoto">
-         <div class="users-image"><img src="img/icons/john-mint-profile.png" alt=""></div> -->
-       
-           </div>
-          </div>
-       <footer data-role="footer" data-template="#footer-template"></footer>
+   <!-- <div data-role="main" class="mainprofile" id="userphoto">
+   <div class="users-image"><img src="img/icons/john-mint-profile.png" alt=""></div> -->
+
+      </div>
+      <!-- </div>  220522 -->
+      <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
    <!--==================================== -->
@@ -950,92 +1035,114 @@
 
 
 
-      <section data-role="page" id="user-settings-page">
-         <header data-role="header">
-            <h1>User Settings</h1>
-            <ul>
-               <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
-                  <li class="flex-stretch"></li>
-                  <li><a href="#user-profile-page">Save</a></li>
-            </ul>
-         </header>
-         <div date-role="main">
-            <ul>
-               <li><a href="#user-edit-page" class="js-logout">Edit User</a></li>
-               <li><a href="#user-password-page" class="js-logout">Edit Password</a></li>
-               <li><a href="#" class="js-logout">Logout</a></li>
-               
-            </ul>
-     <div data-role="main">
-        <ul class="nft-list"></ul>
+   <section data-role="page" id="user-settings-page">
+      <header data-role="header">
+         <h1>User Settings</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <!-- <li><a href="#user-profile-page">Save</a></li> 220522-->
+         </ul>
+      </header>
 
+      <div date-role="main">
+         <ul>
+            <li><a href="#user-edit-page">Edit User</a></li>  
+            <li><a href="#user-password-page">Edit Password</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
+         </ul>
+         <div data-role="main">
+            <ul class="nft-list"></ul>
          </div>
       </div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
-</section>
+      <!-- <footer data-role="footer" data-template="#footer-template"></footer> -->
+   </section>
 
 
-
-
-<section data-role="page" id="user-edit-page">
+   <section data-role="page" id="user-edit-page">
       <header data-role="header">
-            <h1>Edit User</h1>
-            <ul>
-               <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
-               <li class="flex-stretch"></li>
-                <li><a href="#" class="js-submit-user-edit">Save</a></li>
-            </ul>
-         </header>
+         <h1>Edit User</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-user-edit">Save</a></li>
+         </ul>
+      </header>
+
+      <!--<div data-role="main" class="mainprofile" id="userphoto"><div class="users-image"></div> -->
 
       <div data-role="main">
-        <form id="user-edit-form" class="overscroll" data-ajax="false" style="padding:1em"></form>
-          
+         <form id="user-edit-form" class="overscroll" data-ajax="false" style="padding:1em"></form>
       </div>
-      </div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
-</section>
+   
+      <footer data-role="footer" data-template="#footer-template"></footer> -->
+   </section>
 
 
-<section data-role="page" id="user-password-page">
+   <section data-role="page" id="user-password-page">
       <header data-role="header">
-            <h1>Edit User Password</h1>
-            <ul>
-               <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
-               <li class="flex-stretch"></li>
-               <li><a href="#user-profile-page"><img class="iconclose" src="img/icons/close.png"></a></li>
-            </ul>
-         </header>
-      <div data-role="main">
-        <form id="user-password-form" class="overscroll fill-parent display-flex flex-column" data-ajax="false" style="padding:1em">  
-         <div>
+         <h1>Edit User Password</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img class="iconback" src="img/icons/back.png"></a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#user-profile-page"><img class="iconclose" src="img/icons/close.png"></a></li>
+         </ul>
+      </header>
+   
+      <div data-role="main" class="mainprofile" id="userphoto"> 
+         <div class="users-image"></div>
+         <form id="user-password-form" class="overscroll fill-parent display-flex flex-column" data-ajax="false" style="padding:1em">  
+            <div>
+            <div>
+<!--                <div class="users-image"><img src="img/icons/john-mint-profile.png" alt="">
+               </div> 
+ -->
+
+               <div class="newpass-label">
+                  <p>Create New Password</p>
+               </div>
+
+               <div class="form-control">
+                  <label for="user-password-new" class="form-label">New Password</label>
+                  <input class="form-input" type="password" id="user-password-new" data-role="none">
+               </div>
+
+               <div class="form-control">
+                  <label for="user-password-repeat" class="form-label">Repeat Password</label>
+                  <input class="form-input" type="password" id="user-password-repeat" data-role="none"> 
+               </div>
+            </div>
+         <!--  <div class="flex-stretch"></div> -->
 
             <div>
-                <div class="users-image"><img src="img/icons/john-mint-profile.png" alt=""></div>
-
+               <button class="form-button" type="submit" >Submit</button>
             </div>
-
-            <div class="newpass-label">
-                <p>Create New Password</p>
-
             </div>
-            <div class="form-control">
-            <label for="user-password-new" class="form-label">New Password</label>
-            <input class="form-input" type="password" id="user-password-new" data-role="none">
-            </div>
-
-            <div class="form-control">
-            <label for="user-password-repeat" class="form-label">Repeat Password</label>
-            <input class="form-input" type="password" id="user-password-repeat" data-role="none"> </div>
-         </div>
-        <!--  <div class="flex-stretch"></div> -->
-         <div>
-         <button class="form-button" type="submit">Submit</button>
-            </div>
-        </form>
-        </div>
-       </div>
-   <footer data-role="footer" data-template="#footer-template"></footer>
+         </form>
+      </div>
+     <!--  <footer data-role="footer" data-template="#footer-template"></footer> -->
    </section>
+
+
+   <section data-role="page" id="user-edit-photo-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-user-upload">Save</a></li>
+         </ul>
+      </header>
+
+      <div data-role="main">
+         <input type="hidden" id="user-edit-photo-image">
+         <label class="imagepicker replace">
+            <input type='file' id="user-edit-photo-input" data-role="none">
+         </label>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
 
 
    <!--==================================== -->

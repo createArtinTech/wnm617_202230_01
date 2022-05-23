@@ -26,7 +26,7 @@ const makeUserProfilePage = o => {
     
     <div>
         <h2>${o.name}</h2>
-        <h2>${o.address}</h2>
+        <h4>${o.address}</h4>
     </div>
     <div>
         <div><strong>Username</strong> @${o.user_name}</div>
@@ -45,6 +45,7 @@ const makeUserProfilePage = o => {
 <a href="#nft-profile-page">Edit<a/>
 
     `;*/
+
 
 
 const makeNFTProfileDescription = o => `
@@ -80,6 +81,33 @@ const FormControlTextarea = ({namespace,name,displayname,placeholder,value=""}) 
       <textarea data-role="none" class="form-input" placeholder="${placeholder}" id="${namespace}-${name}">${value}</textarea>
    </div>`;
 }
+
+
+
+const SelectOptions = templater(o => `
+   <option value="${o.value}" ${o.selected?'selected':''}>${o.text}</option>
+`);
+const FormSelect = (options,namespace,name,value="") => {
+   return `
+   <div class="form-select">
+      <select id="${namespace}-${name}" data-role="none">
+         ${SelectOptions(options.map(o=>({
+            ...o,
+            ...(o.id==value && {selected: true})
+         })))}
+      </select>
+   </div>`;
+}
+const FormControlSelect = (options,namespace,name,displayname,value="") => {
+   return `<div class="form-control">
+      <label class="form-label" for="#${namespace}-${name}">${displayname}</label>
+      ${FormSelect(options,namespace,name,value)}
+   </div>`;
+}
+
+
+
+
 
 
 const makeNFTForm = (nft,namespace = "nft-add") => {
@@ -155,4 +183,30 @@ ${FormControlInput({
     value:user.email,
 })}
 `;
+}
+
+
+
+
+
+const makeNFTListSet = (nfts, target="#list-page .nft-list") => {
+   $(".filter-bar").html(makeFilterList(nfts));
+   $(target).html(makeNFTList(nfts));
+}
+
+const capitalize = s => (s[0]||"").toUpperCase()+s.slice(1);
+
+const filterList = (nfts,type) => {
+   let a = [...(new Set(nfts.map(o=>o[type])))];
+   return templater(o=>o?`<span data-filter="${type}" data-value="${o}">${capitalize(o)}</span>`:'')(a);
+}
+
+const makeFilterList = (nfts) => {
+   return `
+   <span data-filter="type" data-value="">All</span>
+   |
+   ${filterList(nfts,'type')}
+   |
+   ${filterList(nfts,'category')}
+   `;
 }
