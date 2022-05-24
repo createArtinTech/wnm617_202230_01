@@ -162,7 +162,6 @@ switch($t) {
 
 /* UPDATE SECTION */
 
-
    case "update_user":
       $r = makeQuery($c,"UPDATE
          `userdata`

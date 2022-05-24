@@ -94,15 +94,15 @@ const submitUserSignup = async () => {
 
 const submitUserEdit = async () => {
 	let name = $("#user-edit-name").val();
-	let username = $("#user-edit-username").val();
+	let user_name = $("#user-edit-username").val();
 	let email = $("#user-edit-email").val();
 
-	console.log({name,username,email})  
+	console.log({name,user_name,email})  
 
 	//let {id,error} = await query({
 	let {result,error} = await query({
 		type: 'update_user',
-		params: [name,username,email, sessionStorage.userId]
+		params: [name,user_name,email, sessionStorage.userId]
 	});
 
 	if(error) throw(error);

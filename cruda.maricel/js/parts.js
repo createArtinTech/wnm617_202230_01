@@ -22,17 +22,25 @@ const makeNFTList = templater (o=>`
 const makeUserProfilePage = o => {
     console.log(o)
     return `
+    <div class="userphotocenter">
     <img src="${o.img}">
-    
-    <div>
-        <h2>${o.name}</h2>
-        <h4>${o.address}</h4>
     </div>
-    <div>
-        <div><strong>Username</strong> @${o.user_name}</div>
-        <div><strong>Email</strong> ${o.email}</div>
-        <div><a href="#user-settings-page">Settings</a></div>
-        <div><a href="#landing-page">Log-out<a/></div>
+    
+    
+        <div class="namecenter">${o.name}</div>
+        <div class="address">${o.address}</div>
+    
+    <div class="userprofiledetails">
+        <div class="titletextuserprofile">Username</div> 
+        <div class="filleruserprofile">@${o.user_name}</div>
+            
+        <div class="titletextuserprofile">Email</div>
+        <div class="filleruserprofile">${o.email}</div>
+
+        <hr>
+        <div class="settingsstyle"><a href="#user-settings-page"><strong>
+        Settings</strong></a></div>
+        
     </div>
     `;
 }
@@ -153,6 +161,8 @@ ${FormControlTextarea({
 }
 
 
+
+
 const makeUserForm = (user,namespace = "user-edit") => {
   return `
 ${FormControlInput({
@@ -166,13 +176,12 @@ ${FormControlInput({
 
 ${FormControlInput({
     namespace,
-    name:"username",
+    name:"user_name",
     displayname:"Username",
     type:"text",
     placeholder:"Type a Username",
-    value:user.username,
+    value:user.user_name,
 })}
-
 
 ${FormControlInput({
     namespace,

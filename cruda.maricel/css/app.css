@@ -156,6 +156,30 @@ div {
 
 
 
+.form-select select {
+    background-color: var(--color-neutral-light);
+    border-width: 0;
+    padding: 0.5em 1em;
+    font: inherit;
+    border-radius: 4px;
+    width: 100%;
+    -webkit-appearance: none;
+    outline: 0;
+}
+.form-select {
+   position: relative;
+}
+.form-select::after {
+   content: '▼';
+   position: absolute;
+   right: 0.5em;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 0.8em;
+   color: var(--color-neutral-medium);
+}
+
+
 .hotdog {
    background-color: white;
    border-radius: 2em;
@@ -172,9 +196,11 @@ div {
    font: inherit;
    color: inherit;
    outline: 0;
+   background-color: white;
 }
 .hotdog.dark {
-   background-color: var(--color-neutral-dark);
+   background-color: white;
+   /*background-color: var(--color-neutral-dark);*/
    color: white;
 }
 
@@ -232,6 +258,7 @@ div {
    flex: 1 1 100%;
    overflow: hidden;
    position: relative;
+   margin:  0 1rem;
 }
 .ui-header,
 .ui-footer {
@@ -553,12 +580,10 @@ padding:2rem;
 /* NFT Profile */
 
 .mainprofile{
-
-
    list-style-type: none;
    padding: 0;
    margin: 0;
-   padding: 0 1em;
+   padding: 0 2em;
    height: 100%;
    width: 100%;
    position: relative;
@@ -739,6 +764,62 @@ flex-direction: column;
 
 
 /* User Profile */
+
+.userphotocenter {
+   text-align: center;
+   margin-top:  4rem;
+}
+
+.namecenter {
+   font-size: 1.2rem;
+   text-align: center;
+   margin-top:  2rem;
+
+}
+
+.address {
+   font-size: .8rem;
+   text-align: center;
+   margin-top:  10px;
+   margin-bottom: 3rem;
+
+}
+
+
+/*.userprofiledetails {
+margin-top: 3rem;
+  text-align: lef;
+  line-height: 3rem;
+}
+
+*/
+.titletextuserprofile {
+   color: #4F4F4F;
+   font-size: 1rem;
+   margin-top: 0;
+   padding:  1rem;
+}
+
+
+.filleruserprofile {
+   margin: 0 1.2rem;
+   line-height: .5rem;
+   margin-bottom: 2rem;
+}
+
+
+.settingsstyle {
+   margin: 0 1.2rem;
+   line-height: .5rem;
+   margin-top: 2rem;
+   font-color: #18D7A5;
+
+
+}
+
+
+
+
 
 .users-image img {
   display: block;

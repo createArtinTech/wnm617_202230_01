@@ -163,9 +163,10 @@ const UserProfilePage = async() => {
 
     let [user] = users;
 
+    console.log(user)
+
     $("#user-profile-page [data-role='main']").html(makeUserProfilePage(user));
 
-    console.log(user)
 }
 
 
@@ -174,12 +175,12 @@ const UserEditPage = async() => {
         type:'user_by_id',
         params:[sessionStorage.userId]
     })
-
     let [user] = users;
 
     /*$("#user-nft-edit-form").html(makeUserForm(user,"user-edit"))*/
     $("#user-edit-form").html(makeUserForm(user,"user-edit"))
 }
+
 
 const UserEditPhotoPage = async () => {
    let {result:users} = await query({
