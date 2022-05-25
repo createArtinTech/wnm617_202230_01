@@ -404,6 +404,7 @@ pointer-events: initial;
 .modal.active .modal-drawer {
    transform: translate(0);
    pointer-events: initial;
+   height: 41%;
 }
 
 
@@ -530,6 +531,26 @@ padding:2rem;
   margin: 5px;
   vertical-align: middle;
 }
+
+
+
+
+/* Image Picker */
+.imagepicker.replace {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-position: center;
+   background-size: contain;
+   background-repeat:  no-repeat;
+}
+.imagepicker.replace input {
+   display: none;
+}
+
+
 
 
 /* nft List */
@@ -915,6 +936,52 @@ hr {
     display: block;
     font-size: 0.8em;
 }*/
+
+
+
+
+.imagepicker input {
+  display:none;
+}
+.imagepicker.thumbnail {
+   cursor:pointer;
+   color:white;
+   background-color:rgba(0,0,0,0.3);
+   position:relative;
+   display:inline-block;
+   width:6em;
+   height:6em;
+   border-radius:0.6em;
+   border:0.25em solid white;
+   vertical-align:middle;
+   box-shadow:0 0.15em 0.35em 0.1em rgba(0,0,0,0.2);
+   margin:.5rem;
+
+   background-position:center;
+   background-size:cover;
+}
+/* This will add the floating plus symbol to the imagepicker */
+.imagepicker.thumbnail:before {
+   content:'+';
+   position:absolute;
+   font-size:3em;
+   vertical-align:middle;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+}
+/* This will hide the plus symbol behind the background of the imagepicker if the class "picked" is added to the element */
+.imagepicker.thumbnail.picked:before {
+   z-index:-1;
+}
+
+
+
+
+
+
+
+
 
 /* Layout Classes */
 
