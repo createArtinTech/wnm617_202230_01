@@ -36,3 +36,13 @@ Note: This version of codes consist of calling out the full arrays of the (user,
 I was able to follow the instructions and successfully run the console without major errors but I was having an issue with connecting the assigned data to show in the list page. I've tried every possible way but it was unsuccessful. Hoping to get some help on this. Thanks
 
 https://crudacreativeart.tech/aau/wnm617/cruda.maricel/index.html
+
+
+
+### 5/24/22 - Module #15 FINAL
+
+Note: Added icons on the user interface (heading section) in response to the feedback in order to create consistency.
+
+Adding new user is now working and adding new NFT as well. 
+
+https://crudacreativeart.tech/aau/wnm617/cruda.maricel/index.html
